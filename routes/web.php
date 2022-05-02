@@ -27,6 +27,7 @@ Route::group(['domain' => ''], function() {
         Route::get('galery', [GaleryController::class, 'galery'])->name('galery');
         Route::get('kelasbahasainggris', [LayananController::class, 'kelasbahasainggris'])->name('kelasbahasainggris');
         Route::get('ujiantoefl', [LayananController::class, 'ujiantoefl'])->name('ujiantoefl');
+        Route::get('penerjemah', [LayananController::class, 'penerjemah'])->name('penerjemah');
     });
     Route::group(['middleware' => ['admin']], function () {
         Route::resource('annoucements', AnnoucementController::class);

@@ -47,7 +47,7 @@
                 </li>
                 <li><a class="d-flex align-items-center" href="{{ route('ujiantoefl') }}"><span class="menu-item text-truncate" data-i18n="Security">Ujian TOEFL</span></a>
                 </li>
-                <li><a class="d-flex align-items-center" href="#"><span class="menu-item text-truncate" data-i18n="Billings &amp; Plans">Penerjemah</span></a>
+                <li><a class="d-flex align-items-center" href="{{ route('penerjemah') }}"><span class="menu-item text-truncate" data-i18n="Billings &amp; Plans">Penerjemah</span></a>
                 </li>
               </ul>
             </li>
@@ -57,7 +57,7 @@
                 </li>
                 <li><a class="d-flex align-items-center" href="{{ route('ujiantoefl') }}"><span class="menu-item text-truncate" data-i18n="Reset Password">Ujian TOEFL</span></a>
                 </li>
-                <li><a class="d-flex align-items-center" href="#"><span class="menu-item text-truncate" data-i18n="Verify Email">Penerjemah</span></a>
+                <li><a class="d-flex align-items-center" href="{{ route('penerjemah') }}"><span class="menu-item text-truncate" data-i18n="Verify Email">Penerjemah</span></a>
                 </li>
                 <li><a class="d-flex align-items-center" href="#"><span class="menu-item text-truncate" data-i18n="Deactivate Account">Peminjaman Inventori</span></a>
                 </li>
@@ -71,7 +71,7 @@
                   </li>
                   <li><a class="d-flex align-items-center" href="{{ route('ujiantoefl') }}"><span class="menu-item text-truncate" data-i18n="Reset Password">Ujian TOEFL</span></a>
                   </li>
-                  <li><a class="d-flex align-items-center" href="#"><span class="menu-item text-truncate" data-i18n="Verify Email">Penerjemah</span></a>
+                  <li><a class="d-flex align-items-center" href="{{ route('penerjemah') }}"><span class="menu-item text-truncate" data-i18n="Verify Email">Penerjemah</span></a>
                   </li>
                   <li><a class="d-flex align-items-center" href="#"><span class="menu-item text-truncate" data-i18n="Deactivate Account">Peminjaman Inventori</span></a>
                   </li>

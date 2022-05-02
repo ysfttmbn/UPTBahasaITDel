@@ -12,4 +12,7 @@ class LayananController extends Controller
     public function ujiantoefl(){
 		return view('pages.layanan.ujiantoefl');
 	}
+    public function penerjemah(){
+		return view('pages.layanan.penerjemah');
+	}
 }
