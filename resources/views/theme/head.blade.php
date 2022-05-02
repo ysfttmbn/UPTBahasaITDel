@@ -46,11 +46,6 @@
     <!-- END: Custom CSS-->
 
     <!-- CSS Layanan-->
-      <!-- icons -->
-      <link href="{{ asset('fonts/simple-line-icons/simple-line-icons.min.css') }}" rel="stylesheet" type="text/css" />
-      <link href="{{ asset('fonts/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
-      <link href="{{ asset('fonts/font-awesome/v6/css/all.css') }}" rel="stylesheet" type="text/css" />
-      <link href="{{ asset('fonts/material-design-icons/material-icon.css') }}" rel="stylesheet" type="text/css" />
       <!--bootstrap -->
       <link href="{{ asset('assets/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
       <!-- Material Design Lite CSS -->
