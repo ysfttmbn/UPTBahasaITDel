@@ -44,19 +44,4 @@
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
     <!-- END: Custom CSS-->
-
-    <!-- CSS Layanan-->
-      <!--bootstrap -->
-      <link href="{{ asset('assets/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
-      <!-- Material Design Lite CSS -->
-      <link rel="stylesheet" href="{{ asset('assets/plugins/material/material.min.css') }}">
-      <link rel="stylesheet" href="{{ asset('assets/css/material_style.css') }}">
-      <!-- Theme Styles -->
-      <link href="{{ ('assets/css/theme/light/theme_style.css') }}" rel="stylesheet" id="rt_style_components" type="text/css" />
-      <link href="{{ ('assets/css/theme/light/style.css') }}" rel="stylesheet" type="text/css" />
-      <link href="{{ ('assets/css/plugins.min.css') }}" rel="stylesheet" type="text/css" />
-      <link href="{{ ('assets/css/responsive.css') }}" rel="stylesheet" type="text/css" />
-      <link href="{{ ('assets/css/theme/light/theme-color.css') }}" rel="stylesheet" type="text/css" />
-      <!-- favicon -->
-      <link rel="shortcut icon" href="https://www.einfosoft.com/templates/admin/smart/source/assets/img/favicon.ico" />
   </head>
