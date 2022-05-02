@@ -5,6 +5,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AnnoucementController;
+use App\Http\Controllers\GaleryController;
+use App\Http\Controllers\LayananController;
 
 Route::group(['domain' => ''], function() {
     Route::get('auth',[AuthController::class, 'index'])->name('auth.index');
@@ -23,6 +25,7 @@ Route::group(['domain' => ''], function() {
         Route::get('background', [HomeController::class, 'background'])->name('background');
         Route::get('staff', [HomeController::class, 'staff'])->name('staff');
         Route::get('galery', [GaleryController::class, 'galery'])->name('galery');
+        Route::get('kelasbahasainggris', [LayananController::class, 'kelasbahasainggris'])->name('kelasbahasainggris');
     });
     Route::group(['middleware' => ['admin']], function () {
         Route::resource('annoucements', AnnoucementController::class);

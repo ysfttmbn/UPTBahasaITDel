@@ -43,7 +43,7 @@
           <ul class="menu-content">
             <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Account Settings">Umum</span></a>
               <ul class="menu-content">
-                <li><a class="d-flex align-items-center" href="#"><span class="menu-item text-truncate" data-i18n="Account">Kelas Bahasa Inggris</span></a>
+                <li><a class="d-flex align-items-center" href="{{ route('kelasbahasainggris') }}"><span class="menu-item text-truncate" data-i18n="Account">Kelas Bahasa Inggris</span></a>
                 </li>
                 <li><a class="d-flex align-items-center" href="#"><span class="menu-item text-truncate" data-i18n="Security">Ujian TOEFL</span></a>
                 </li>
