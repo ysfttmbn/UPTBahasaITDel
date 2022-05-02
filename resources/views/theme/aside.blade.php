@@ -53,29 +53,29 @@
             </li>
             <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Mail Template">Mahasiswa</span></a>
               <ul class="menu-content">
-                <li><a class="d-flex align-items-center" href="#" target="_blank"><span class="menu-item text-truncate" data-i18n="Welcome">Kelas Bahasa Inggris</span></a>
+                <li><a class="d-flex align-items-center" href="{{ route('kelasbahasainggris') }}"><span class="menu-item text-truncate" data-i18n="Welcome">Kelas Bahasa Inggris</span></a>
                 </li>
-                <li><a class="d-flex align-items-center" href="#" target="_blank"><span class="menu-item text-truncate" data-i18n="Reset Password">Ujian TOEFL</span></a>
+                <li><a class="d-flex align-items-center" href="#"><span class="menu-item text-truncate" data-i18n="Reset Password">Ujian TOEFL</span></a>
                 </li>
-                <li><a class="d-flex align-items-center" href="#" target="_blank"><span class="menu-item text-truncate" data-i18n="Verify Email">Penerjemah</span></a>
+                <li><a class="d-flex align-items-center" href="#"><span class="menu-item text-truncate" data-i18n="Verify Email">Penerjemah</span></a>
                 </li>
-                <li><a class="d-flex align-items-center" href="#" target="_blank"><span class="menu-item text-truncate" data-i18n="Deactivate Account">Peminjaman Inventori</span></a>
+                <li><a class="d-flex align-items-center" href="#"><span class="menu-item text-truncate" data-i18n="Deactivate Account">Peminjaman Inventori</span></a>
                 </li>
-                <li><a class="d-flex align-items-center" href="#" target="_blank"><span class="menu-item text-truncate" data-i18n="Invoice">Peminjaman Ruangan</span></a>
+                <li><a class="d-flex align-items-center" href="#"><span class="menu-item text-truncate" data-i18n="Invoice">Peminjaman Ruangan</span></a>
                 </li>
               </ul>
             </li>
             <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Miscellaneous">Dosen/Staff</span></a>
               <ul class="menu-content">
-                  <li><a class="d-flex align-items-center" href="#" target="_blank"><span class="menu-item text-truncate" data-i18n="Welcome">Kelas Bahasa Inggris</span></a>
+                  <li><a class="d-flex align-items-center" href="{{ route('kelasbahasainggris') }}"><span class="menu-item text-truncate" data-i18n="Welcome">Kelas Bahasa Inggris</span></a>
                   </li>
-                  <li><a class="d-flex align-items-center" href="#" target="_blank"><span class="menu-item text-truncate" data-i18n="Reset Password">Ujian TOEFL</span></a>
+                  <li><a class="d-flex align-items-center" href="#"><span class="menu-item text-truncate" data-i18n="Reset Password">Ujian TOEFL</span></a>
                   </li>
-                  <li><a class="d-flex align-items-center" href="#" target="_blank"><span class="menu-item text-truncate" data-i18n="Verify Email">Penerjemah</span></a>
+                  <li><a class="d-flex align-items-center" href="#"><span class="menu-item text-truncate" data-i18n="Verify Email">Penerjemah</span></a>
                   </li>
-                  <li><a class="d-flex align-items-center" href="#" target="_blank"><span class="menu-item text-truncate" data-i18n="Deactivate Account">Peminjaman Inventori</span></a>
+                  <li><a class="d-flex align-items-center" href="#"><span class="menu-item text-truncate" data-i18n="Deactivate Account">Peminjaman Inventori</span></a>
                   </li>
-                  <li><a class="d-flex align-items-center" href="#" target="_blank"><span class="menu-item text-truncate" data-i18n="Invoice">Peminjaman Ruangan</span></a>
+                  <li><a class="d-flex align-items-center" href="#"><span class="menu-item text-truncate" data-i18n="Invoice">Peminjaman Ruangan</span></a>
                   </li>
               </ul>
             </li>

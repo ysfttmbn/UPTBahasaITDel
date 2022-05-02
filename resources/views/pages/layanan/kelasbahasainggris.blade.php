@@ -1,4 +1,6 @@
-<x-auth-layout title="kelasbahasainggris">
+<x-web-layout title="kelasbahasainggris">
+    <div class="app-content content ">
+    <div class="content-body">
     <div class="row">
         <div class="col-md-12">
             <!-- BEGIN PROFILE SIDEBAR -->
@@ -153,4 +155,4 @@
             <!-- END PROFILE CONTENT -->
         </div>
     </div>
-</x-auth-layout>
+</x-web-layout>
