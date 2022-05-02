@@ -43,7 +43,7 @@
                       <div class="card">
                           <div class="card-body d-flex align-items-center justify-content-between">
                               <div>
-                                  <h3 class="fw-bolder mb-75">19,800</h3>
+                                  <h3 class="fw-bolder mb-75">19,860</h3>
                                   <span>Room Borrowing</span>
                               </div>
                               <div class="avatar bg-light-success p-50">
