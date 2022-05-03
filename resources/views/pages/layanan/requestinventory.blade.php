@@ -1,3 +1,3 @@
-<x-web-layout title="PeminjamanInventory">
+<x-web-layout title="RequestInventory">
 
 </x-web-layout>
