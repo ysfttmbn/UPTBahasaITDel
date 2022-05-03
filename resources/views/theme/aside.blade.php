@@ -59,7 +59,7 @@
                 </li>
                 <li><a class="d-flex align-items-center" href="{{ route('penerjemah') }}"><span class="menu-item text-truncate" data-i18n="Verify Email">Penerjemah</span></a>
                 </li>
-                <li><a class="d-flex align-items-center" href="#"><span class="menu-item text-truncate" data-i18n="Deactivate Account">Request Inventori</span></a>
+                <li><a class="d-flex align-items-center" href="{{ route('requestinventory') }}"><span class="menu-item text-truncate" data-i18n="Deactivate Account">Request Inventori</span></a>
                 </li>
                 <li><a class="d-flex align-items-center" href="#"><span class="menu-item text-truncate" data-i18n="Invoice">Request Ruangan</span></a>
                 </li>
@@ -73,7 +73,7 @@
                   </li>
                   <li><a class="d-flex align-items-center" href="{{ route('penerjemah') }}"><span class="menu-item text-truncate" data-i18n="Verify Email">Penerjemah</span></a>
                   </li>
-                  <li><a class="d-flex align-items-center" href="#"><span class="menu-item text-truncate" data-i18n="Deactivate Account">Request Inventori</span></a>
+                  <li><a class="d-flex align-items-center" href="{{ route('requestinventory') }}"><span class="menu-item text-truncate" data-i18n="Deactivate Account">Request Inventori</span></a>
                   </li>
                   <li><a class="d-flex align-items-center" href="#"><span class="menu-item text-truncate" data-i18n="Invoice">Request Ruangan</span></a>
                   </li>
