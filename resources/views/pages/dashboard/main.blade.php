@@ -110,7 +110,7 @@
                             <td valign="top" class="dataTables_empty">{{ $annocement->id }}</td>
                             <td valign="top" class="dataTables_empty">{{ $annocement->title }}</td>
                             <td valign="top" class="dataTables_empty">{{ $annocement->description }}</td>
-                            <td valign="top" class="dataTables_empty">{{ $annocement->file }}</td>
+                            <td valign="top" class="dataTables_empty"><a href="{{ asset('file/'. $annocement->file) }}" target="_blank">{{ $annocement->file }}</td>
                             <td valign="top" class="dataTables_empty">{{ $annocement->date_of_use }}</td>
                             <td valign="top" class="dataTables_empty">{{ $annocement->date_of_end }}</td>
                             @if(Auth::user()->isAdmin)
