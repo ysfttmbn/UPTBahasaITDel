@@ -29,6 +29,7 @@ Route::group(['domain' => ''], function() {
         Route::get('ujiantoefl', [LayananController::class, 'ujiantoefl'])->name('ujiantoefl');
         Route::get('penerjemah', [LayananController::class, 'penerjemah'])->name('penerjemah');
         Route::get('requestinventory', [LayananController::class, 'requestinventory'])->name('requestinventory');
+        Route::get('requestruangan', [LayananController::class, 'requestruangan'])->name('requestruangan');
     });
     Route::group(['middleware' => ['admin']], function () {
         Route::resource('annoucements', AnnoucementController::class);
