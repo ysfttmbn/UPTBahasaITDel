@@ -6,13 +6,13 @@
         <h4 class="card-title">Add Request</h4>
     </div>
     <div class="card-body">
-        {{-- @If($data->id) --}}
-        <form class="needs-validation" novalidate="" action="{{-- {{ route('requestinventory.update', $data->id) }} --}}" method="POST" enctype="multipart/form-data">
-            {{-- @method('PATCH') --}}
-            {{-- @else --}}
+        @If($data->id)
+        <form class="needs-validation" novalidate="" action="{{ route('requestinventory.update', $data->id) }}" method="POST" enctype="multipart/form-data">
+            @method('PATCH')
+            @else
         <form class="needs-validation" novalidate="" action="{{-- {{ route('requestinventory.store') }} --}}" method="POST" enctype="multipart/form-data">
-        {{-- @endif --}}
-            {{-- @csrf --}}
+        @endif
+            @csrf
             <div class="mb-1">
                 <label class="form-label" for="basic-addon-name">Books</label>
                 <input type="text" name="title" id="basic-addon-name" class="form-control" placeholder="Judul" aria-label="Name" aria-describedby="basic-addon-name" required value="{{-- {{ $data->book }} --}}">
@@ -30,7 +30,7 @@
                 <textarea class="form-control" name="description"id="validationBioBootstrap" name="Tambahannoucements" required value="{{-- {{ $data->description }} --}}"></textarea>
             </div><br>
             <button type="submit" class="btn btn-primary waves-effect waves-float waves-light">save changes</button>
-            <a href="{{-- {{ route('requestinventory') }} --}}" type="submit" class="btn btn-primary waves-effect waves-float waves-light">cancel</a>
+            <a href="{{ route('requestinventory') }}" type="submit" class="btn btn-primary waves-effect waves-float waves-light">cancel</a>
         </form>
     </div>
  </div>
