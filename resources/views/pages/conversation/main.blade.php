@@ -8,7 +8,7 @@
                 <div class="col-md-6 col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Percakapan</h4>
+                            <h4 class="card-title">Topik Percakapan</h4>
                         </div>
                         <div class="card-body">
                             <form class="form form-horizontal" action="{{ route('conversation.store') }}" method="POST">
@@ -28,7 +28,7 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-9 offset-sm-3">
-                                        <button type="submit" class="btn btn-primary me-1 waves-effect waves-float waves-light">Submit</button>
+                                        <button type="submit" class="btn btn-primary me-1 waves-effect waves-float waves-light">Kirim</button>
                                         <button type="reset" class="btn btn-outline-secondary waves-effect">Reset</button>
                                     </div>
                                 </div>
@@ -47,7 +47,7 @@
                                     <div class="d-flex justify-content-start align-items-center mb-1">
                                         <!-- avatar -->
                                         <div class="avatar me-1">
-                                            <img src="../../../app-assets/images/portrait/small/avatar-s-18.jpg" alt="avatar img" width="50" height="50">
+                                            <img src="img/User.png" alt="avatar img" width="50" height="50">
                                         </div>
                                         <!--/ avatar -->
                                         <div class="profile-user-info">
@@ -66,15 +66,11 @@
                                     @foreach ($replies as $reply)
                                     <div class="d-flex align-items-start mb-1">
                                         <div class="avatar mt-25 me-75">
-                                            <img src="../../../app-assets/images/portrait/small/avatar-s-6.jpg" alt="Avatar" width="34" height="34">
+                                            <img src="img/User.png" alt="Avatar" width="34" height="34">
                                         </div>
                                         <div class="profile-user-info w-100">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <h6 class="mb-0">{{ $reply->user->username }}</h6>
-                                                <a href="#">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart text-body font-medium-3"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                                                    <span class="align-middle text-muted">34</span>
-                                                </a>
                                             </div>
                                             <small>{{ $reply->message }}</small>
                                         </div>
@@ -86,11 +82,11 @@
                                     <form action="{{ route('conversation.reply', $data->id) }}" method="POST">
                                         @csrf
                                         <fieldset class="mb-75">
-                                            <label class="form-label" for="label-textarea">Add Comment</label>
-                                            <textarea name="message" class="form-control" id="label-textarea" rows="3" placeholder="Add Comment"></textarea>
+                                            <label class="form-label" for="label-textarea">Balas</label>
+                                            <textarea name="message" class="form-control" id="label-textarea" rows="3" placeholder="Add message"></textarea>
                                         </fieldset>
                                         <!--/ comment box -->
-                                        <button type="sumbit" class="btn btn-sm btn-primary waves-effect waves-float waves-light">Post Comment</button>
+                                        <button type="sumbit" class="btn btn-sm btn-primary waves-effect waves-float waves-light">Kirim</button>
                                     </form>
                                 </div>
                             @endforeach

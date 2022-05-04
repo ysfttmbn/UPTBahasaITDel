@@ -80,9 +80,7 @@
               </ul>
             </li>
 {{-- <<<<<<< Updated upstream --}}
-            <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Account Settings">Contact Us</span></a></li>
-{{-- ======= --}}
-            
+{{-- ======= --}}           
             <li><a class="d-flex align-items-center" href="{{ route('conversation.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Verify Email">Contact Us</span></a>
             </li>
 {{-- >>>>>>> Stashed changes --}}
