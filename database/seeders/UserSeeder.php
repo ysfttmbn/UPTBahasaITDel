@@ -20,6 +20,14 @@ class UserSeeder extends Seeder
 
             ],
             [
+                'username' => 'yosafattambun',
+                'name' => 'Yosafat Tambun',
+                'email' => 'yosafathtambun@gmail.com',
+                'password' => Hash::make('Yosafat123:'),
+                'isAdmin' => false
+
+            ],
+            [
                 'username' => 'julianti117',
                 'name' => 'julianti sitorus',
                 'email' => 'juliantisitorus071@gmail.com',
