@@ -8,10 +8,10 @@
     <meta property="og:title" content="{{config('app.name') . ': ' .$title ?? config('app.name')}}" />
     <meta property="og:url" content="https://upi.dev" />
     <meta property="og:site_name" content="{{config('app.name')}}" />
-    <link rel="canonical" href="https://upi.dev" />
+    <link rel="canonical" href="{{ url('https://upi.dev') }}" />
     <link rel="shortcut icon" href="{{asset('img/favicon.png')}}" />
     <!--begin::Fonts-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+    <link rel="stylesheet" href="{{ url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700') }}" />
     <!--end::Fonts-->
     <!--begin::Global Stylesheets Bundle(used by all pages)-->
     <link href="{{asset('keenthemes/plugins/global/plugins.bundle.css')}}" rel="stylesheet" type="text/css" />
