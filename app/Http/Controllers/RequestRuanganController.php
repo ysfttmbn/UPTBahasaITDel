@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class RequestRuanganController extends Controller
 {
+    public function requestruangan(){
+		return view('pages.requestruangan.requestruangan');
+	}
+
     /**
      * Display a listing of the resource.
      *

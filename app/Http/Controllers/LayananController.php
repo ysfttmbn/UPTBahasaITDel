@@ -15,10 +15,4 @@ class LayananController extends Controller
     public function penerjemah(){
 		return view('pages.layanan.penerjemah');
 	}
-	public function requestinventory(){
-		return view('pages.layanan.requestinventory');
-	}
-	public function requestruangan(){
-		return view('pages.layanan.requestruangan');
-	}
 }

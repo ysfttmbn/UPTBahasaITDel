@@ -6,7 +6,11 @@ use App\Models\RequestInventory;
 use Illuminate\Http\Request;
 
 class RequestInventoryController extends Controller
-{
+{   
+    public function requestinventory(){
+		return view('pages.requestinventory.requestinventory');
+	}
+
     /**
      * Display a listing of the resource.
      *
