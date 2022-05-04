@@ -1,4 +1,4 @@
-<script src="app-assets/vendors/js/vendors.min.js"></script>
+<script src="{{ asset('app-assets/vendors/js/vendors.min.js') }}"></script>
     <!-- BEGIN Vendor JS-->
 
     <!-- BEGIN: Page Vendor JS-->
