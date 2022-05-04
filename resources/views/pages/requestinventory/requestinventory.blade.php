@@ -1,4 +1,4 @@
-<x-web-layout title="Dashboard">
+<x-web-layout title="RequestInventory">
     <div class="app-content content ">
       <div class="content-overlay"></div>
       <div class="header-navbar-shadow"></div>
@@ -13,7 +13,7 @@
                               <div class="me-1"><div id="DataTables_Table_0_filter" class="dataTables_filter"></div>
                             </div>
                             <div class="dt-buttons d-inline-flex mt-50">
-                              <a class="dt-button add-new btn btn-primary" href="#">
+                              <a class="dt-button add-new btn btn-primary" href="{{ route('requestinventory.create') }}">
                                   <span>Request</span> 
                               </a>
                             </div>

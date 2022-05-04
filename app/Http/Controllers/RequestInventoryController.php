@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 
 class RequestInventoryController extends Controller
 {   
-    public function requestinventory(){
-		return view('pages.requestinventory.requestinventory');
-	}
+    // public function requestinventory(){
+	// 	return view('pages.requestinventory.requestinventory');
+	// }
 
     /**
      * Display a listing of the resource.
@@ -18,7 +18,7 @@ class RequestInventoryController extends Controller
      */
     public function index()
     {
-        //
+        return view('pages.requestinventory.requestinventory');
     }
 
     /**
@@ -28,7 +28,7 @@ class RequestInventoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.requestinventory.input');
     }
 
     /**
@@ -39,7 +39,27 @@ class RequestInventoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'books' => 'required',
+            'date_of_use' => 'required',
+            'payback_time' => 'required',
+            'description' => 'required',
+        ]);
+
+        $file = $request->file('file');
+        $namaFile =$file->getClientOriginalName();
+        $tujuanFile = 'file';
+        $file->move($tujuanFile,$namaFile);
+
+        $requestinventory = new RequestInventory;
+        $requestinventory->id_user = Auth::User()->id;
+        $requestinventory->books = $request->books;
+        $requestinventory->date_of_use = $request->date_of_use;
+        $requestinventory->payback_time = $request->payback_time;
+        $requestinventory->description = $request->description;
+
+        $requestinventory->save();
+        return redirect('dashboard');
     }
 
     /**

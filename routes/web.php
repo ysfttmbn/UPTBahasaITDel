@@ -32,14 +32,15 @@ Route::group(['domain' => ''], function() {
         Route::get('ujiantoefl', [LayananController::class, 'ujiantoefl'])->name('ujiantoefl');
         Route::get('penerjemah', [LayananController::class, 'penerjemah'])->name('penerjemah');
 
-        Route::get('requestinventory', [LayananController::class, 'requestinventory'])->name('requestinventory');
+        //Route::get('requestinventory', [LayananController::class, 'requestinventory'])->name('requestinventory');
+        Route::resource('requestinventory', RequestInventoryController::class);
         Route::get('requestruangan', [LayananController::class, 'requestruangan'])->name('requestruangan');
         Route::post('conversation/{conversation}', [ConversationController::class, 'reply'])->name('conversation.reply');
         Route::resource('conversation', ConversationController::class);
         // Route::post('conversation', [ConversationController::class, 'store'])->name('conversation.store');
         
 
-        Route::get('requestinventory', [RequestInventoryController::class, 'requestinventory'])->name('requestinventory');
+        //Route::get('requestinventory', [RequestInventoryController::class, 'requestinventory'])->name('requestinventory');
         Route::get('requestruangan', [RequestRuanganController::class, 'requestruangan'])->name('requestruangan');
 
     });
