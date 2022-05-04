@@ -8,6 +8,8 @@ use App\Http\Controllers\AnnoucementController;
 use App\Http\Controllers\ConversationController;
 use App\Http\Controllers\GaleryController;
 use App\Http\Controllers\LayananController;
+use App\Http\Controllers\RequestInventoryController;
+use App\Http\Controllers\RequestRuanganController;
 
 Route::group(['domain' => ''], function() {
     Route::get('auth',[AuthController::class, 'index'])->name('auth.index');
@@ -29,15 +31,17 @@ Route::group(['domain' => ''], function() {
         Route::get('kelasbahasainggris', [LayananController::class, 'kelasbahasainggris'])->name('kelasbahasainggris');
         Route::get('ujiantoefl', [LayananController::class, 'ujiantoefl'])->name('ujiantoefl');
         Route::get('penerjemah', [LayananController::class, 'penerjemah'])->name('penerjemah');
-<<<<<<< Updated upstream
+
         Route::get('requestinventory', [LayananController::class, 'requestinventory'])->name('requestinventory');
         Route::get('requestruangan', [LayananController::class, 'requestruangan'])->name('requestruangan');
-=======
         Route::post('conversation/{conversation}', [ConversationController::class, 'reply'])->name('conversation.reply');
         Route::resource('conversation', ConversationController::class);
         // Route::post('conversation', [ConversationController::class, 'store'])->name('conversation.store');
         
->>>>>>> Stashed changes
+
+        Route::get('requestinventory', [RequestInventoryController::class, 'requestinventory'])->name('requestinventory');
+        Route::get('requestruangan', [RequestRuanganController::class, 'requestruangan'])->name('requestruangan');
+
     });
     Route::group(['middleware' => ['admin']], function () {
         Route::resource('annoucements', AnnoucementController::class);
