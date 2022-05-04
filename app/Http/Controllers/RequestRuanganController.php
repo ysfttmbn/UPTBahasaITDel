@@ -16,7 +16,8 @@ class RequestRuanganController extends Controller
      */
     public function index()
     {
-        return view('pages.requestruangan.requestruangan');
+        $requestruangan = RequestRuangan::all();
+        return view('pages.requestruangan.requestruangan', compact('requestruangan'));
     }
 
     /**
@@ -26,8 +27,7 @@ class RequestRuanganController extends Controller
      */
     public function create()
     {
-        $data = User::all();
-        return view('pages.requestruangan.input', ['data' => new RequestRuangan, 'users'=>$data]);
+        return view('pages.requestruangan.input', ['data' => new RequestRuangan]);
     }
 
     /**
@@ -38,28 +38,21 @@ class RequestRuanganController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
         $request->validate([
-            'books' => 'required',
+            'room' => 'required',
             'date_of_use' => 'required',
-            'payback_time' => 'required',
+            'time_end' => 'required',
             'description' => 'required',
         ]);
+        $requestruangan = new RequestRuangan;
+        $requestruangan->room = $request->room;
+        $requestruangan->user_id = Auth::User()->id;
+        $requestruangan->date_of_use = $request->date_of_use;
+        $requestruangan->time_end = $request->time_end;
+        $requestruangan->description = $request->description;
 
-        $file = $request->file('file');
-        $namaFile =$file->getClientOriginalName();
-        $tujuanFile = 'file';
-        $file->move($tujuanFile,$namaFile);
-
-        $requestinventory = new RequestRuangan;
-        $requestinventory->id_user = Auth::User()->id;
-        $requestinventory->books = $request->books;
-        $requestinventory->date_of_use = $request->date_of_use;
-        $requestinventory->payback_time = $request->payback_time;
-        $requestinventory->description = $request->description;
-
-        $requestinventory->save();
-        return redirect('requestinventory');
+        $requestruangan->save();
+        return redirect('requestruangan');
     }
 
     /**
@@ -68,7 +61,7 @@ class RequestRuanganController extends Controller
      * @param  \App\Models\RequestRuangan  $requestRuangan
      * @return \Illuminate\Http\Response
      */
-    public function show(RequestRuangan $requestRuangan)
+    public function show(RequestRuangan $requestruangan)
     {
         //
     }
@@ -79,9 +72,9 @@ class RequestRuanganController extends Controller
      * @param  \App\Models\RequestRuangan  $requestRuangan
      * @return \Illuminate\Http\Response
      */
-    public function edit(RequestRuangan $requestRuangan)
+    public function edit(RequestRuangan $requestruangan)
     {
-        //
+        return view('pages.requestruangan.input', ['data' => $requestruangan]);
     }
 
     /**
@@ -91,9 +84,24 @@ class RequestRuanganController extends Controller
      * @param  \App\Models\RequestRuangan  $requestRuangan
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, RequestRuangan $requestRuangan)
+    public function update(Request $request, RequestRuangan $requestruangan)
     {
-        //
+        $request->validate([
+            'room' => 'required',
+            'date_of_use' => 'required',
+            'time_end' => 'required',
+            'description' => 'required',
+        ]);
+
+        $requestruangan->room = $request->room;
+        $requestruangan->user_id = Auth::User()->id;
+        $requestruangan->date_of_use = $request->date_of_use;
+        $requestruangan->time_end = $request->time_end;
+        $requestruangan->description = $request->description;
+
+
+        $requestruangan->update();
+        return redirect('requestruangan');
     }
 
     /**
@@ -102,8 +110,9 @@ class RequestRuanganController extends Controller
      * @param  \App\Models\RequestRuangan  $requestRuangan
      * @return \Illuminate\Http\Response
      */
-    public function destroy(RequestRuangan $requestRuangan)
+    public function destroy(RequestRuangan $requestruangan)
     {
-        //
+        $requestruangan->delete();
+        return redirect('requestruangan');
     }
 }

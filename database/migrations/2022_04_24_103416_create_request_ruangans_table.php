@@ -15,6 +15,13 @@ return new class extends Migration
     {
         Schema::create('request_ruangans', function (Blueprint $table) {
             $table->id();
+            $table->string('room');
+            $table->unsignedBigInteger('user_id');
+            $table->date('date_of_use');
+            $table->date('time_end');
+            $table->longText('description');
+            $table->index('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }
