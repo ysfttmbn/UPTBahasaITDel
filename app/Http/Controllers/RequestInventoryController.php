@@ -60,7 +60,7 @@ class RequestInventoryController extends Controller
         $requestinventory->description = $request->description;
 
         $requestinventory->save();
-        return redirect('requestinventory');
+        return redirect('requestinventory.index');
     }
 
     /**
