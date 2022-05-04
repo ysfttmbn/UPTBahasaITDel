@@ -17,7 +17,7 @@ class RequestRuanganController extends Controller
     public function index()
     {
         $requestruangan = RequestRuangan::all();
-        return view('pages.requestruangan.requestruangan', compact('requestruangan'));
+        return view('pages.requestruangan.main', compact('requestruangan'));
     }
 
     /**
