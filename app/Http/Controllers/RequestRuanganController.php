@@ -50,7 +50,6 @@ class RequestRuanganController extends Controller
         $requestruangan->date_of_use = $request->date_of_use;
         $requestruangan->time_end = $request->time_end;
         $requestruangan->description = $request->description;
-
         $requestruangan->save();
         return redirect('requestruangan');
     }

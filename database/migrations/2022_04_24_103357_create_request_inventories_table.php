@@ -15,6 +15,16 @@ return new class extends Migration
     {
         Schema::create('request_inventories', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('inventory_id');
+            $table->unsignedBigInteger('user_id');
+            $table->date('date_of_use');
+            $table->date('time_end');
+            $table->enum('status', [1, 2, 3])->default(1);
+            $table->longText('description');
+            $table->index('inventory_id');
+            $table->foreign('inventory_id')->references('id')->on('inventories')->onDelete('cascade');
+            $table->index('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

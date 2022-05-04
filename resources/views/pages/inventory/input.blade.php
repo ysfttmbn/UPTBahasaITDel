@@ -7,30 +7,23 @@
     </div>
     <div class="card-body">
         @If($data->id)
-        <form class="needs-validation" novalidate="" action="{{ route('requestinventory.update', $data->id) }}" method="POST" enctype="multipart/form-data">
+        <form class="needs-validation" novalidate="" action="{{ route('inventory.update', $data->id) }}" method="POST" enctype="multipart/form-data">
             @method('PATCH')
             @else
-        <form class="needs-validation" novalidate="" action="{{-- {{ route('requestinventory.store') }} --}}" method="POST" enctype="multipart/form-data">
+        <form class="needs-validation" novalidate="" action="{{ route('inventory.store') }}" method="POST" enctype="multipart/form-data">
         @endif
             @csrf
             <div class="mb-1">
-                <label class="form-label" for="basic-addon-name">Books</label>
-                <input type="text" name="title" id="basic-addon-name" class="form-control" placeholder="Judul" aria-label="Name" aria-describedby="basic-addon-name" required value="{{-- {{ $data->book }} --}}">
+                <label class="form-label" for="basic-addon-name">Nama Inventori</label>
+                <input type="text" name="name" id="basic-addon-name" class="form-control" placeholder="Nama Inventori" aria-label="Name" aria-describedby="basic-addon-name" required value="{{ $data->title }}">
             </div>
-            <div class="mb-1">
-                <label class="d-block form-label" for="validationBioBootstrap">Date of use</label>
-                <input type="date"class="form-control" name="date_of_use" id="validationBioBootstrap" name="Tambahannoucements"required=""value="{{-- {{ $data->date_of_use }} --}}">
+           <div class="mb-1">
+                <label for="customFile1" class="form-label">Tambahkan Gambar</label>
+                <input type="file" class="form-control" name="images" id="customFile1" required value="{{ $data->file }}">
             </div>
-            <div class="mb-1">
-                <label class="d-block form-label" for="validationBioBootstrap">Payback Time</label>
-                <input type="date"class="form-control" name="date_of_end"id="validationBioBootstrap" name="Tambahannoucements"  required=""value="{{-- {{ $data->payback_time}} --}}">
-            </div>
-            <div class="mb-1">
-                <label class="d-block form-label" for="validationBioBootstrap">Description</label>
-                <textarea class="form-control" name="description"id="validationBioBootstrap" name="Tambahannoucements" required value="{{-- {{ $data->description }} --}}"></textarea>
-            </div><br>
-            <button type="submit" class="btn btn-primary waves-effect waves-float waves-light">Request</button>
-            <a href="{{ route('requestinventory.index') }}" type="submit" class="btn btn-primary waves-effect waves-float waves-light">cancel</a>
+            <br>
+            <button type="submit" class="btn btn-primary waves-effect waves-float waves-light">Tambah</button>
+            <a href="{{ route('inventory.index') }}" type="submit" class="btn btn-primary waves-effect waves-float waves-light">cancel</a>
         </form>
     </div>
  </div>

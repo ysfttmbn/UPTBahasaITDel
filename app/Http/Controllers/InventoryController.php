@@ -14,7 +14,8 @@ class InventoryController extends Controller
      */
     public function index()
     {
-        //
+        $inventory = Inventory::all();
+        return view('pages.inventory.main', ['inventories' => $inventory]);
     }
 
     /**
@@ -24,7 +25,7 @@ class InventoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.inventory.input', ['data' => new Inventory]);
     }
 
     /**
@@ -35,7 +36,23 @@ class InventoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd($request->all());
+        $request->validate([
+            'name' => 'required',
+            'images' => 'required',
+        ]);
+
+        $file = $request->file('images');
+        $namaFile =$file->getClientOriginalName();
+        $tujuanFile = 'file';
+        $file->move($tujuanFile,$namaFile);
+
+        $inventory = new Inventory;
+        $inventory->name = $request->name;
+        $inventory->images = $namaFile;
+        
+        $inventory->save();
+        return redirect('inventory');
     }
 
     /**
@@ -46,7 +63,7 @@ class InventoryController extends Controller
      */
     public function show(Inventory $inventory)
     {
-        //
+        return view('pages.inventory.input', ['data' => $inventory]);
     }
 
     /**
@@ -69,7 +86,22 @@ class InventoryController extends Controller
      */
     public function update(Request $request, Inventory $inventory)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'images' => 'required',
+        ]);
+
+        $file = $request->file('images');
+        $namaFile =$file->getClientOriginalName();
+        $tujuanFile = 'file';
+        $file->move($tujuanFile,$namaFile);
+
+        $inventory->name = $request->name;
+        $inventory->images = $namaFile;
+        $inventory->description = $request->description;
+        
+        $inventory->update();
+        return redirect('inventory');
     }
 
     /**
@@ -80,6 +112,7 @@ class InventoryController extends Controller
      */
     public function destroy(Inventory $inventory)
     {
-        //
+        $inventory->delete();
+        return redirect('inventory');
     }
 }

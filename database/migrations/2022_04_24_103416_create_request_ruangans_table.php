@@ -19,6 +19,7 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->date('date_of_use');
             $table->date('time_end');
+            $table->enum('status', [1, 2, 3])->default(1);
             $table->longText('description');
             $table->index('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

@@ -8,9 +8,11 @@
                 <div class="me-1">
                 </div>
                 <div class="dt-buttons d-inline-flex mt-50">
+                    @if(Auth::User()->isAdmin)
                     <a class="dt-button add-new btn btn-primary waves-effect waves-float waves-light" href="{{ route('gallery.create') }}">
                         <span>Add Activity</span> 
                     </a>
+                    @endif
                 </div>
                </div>
                <div class="row">
@@ -24,9 +26,11 @@
                                     {{ $item->description }}
                                 </p>
                                 <div class="dt-buttons d-inline-flex mt-50">
+                                    @if(Auth::User()->isAdmin)
                                     <a class="btn btn-outline-primary waves-effect center-block" href="{{ route('gallery.edit', $item->id) }}">
                                         <span> Edit </span> 
                                     </a>
+                                    @endif
                                 </div>
                             </div>
                         </div>

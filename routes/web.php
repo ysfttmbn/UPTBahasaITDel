@@ -37,12 +37,15 @@ Route::group(['domain' => ''], function() {
         Route::resource('requestruangan', RequestRuanganController::class);
         Route::post('conversation/{conversation}', [ConversationController::class, 'reply'])->name('conversation.reply');
         Route::resource('conversation', ConversationController::class);
-        
+        Route::resource('gallery', GalleryController::class);
+        // Route::get('inventory', [InventoryController::class, 'index'])->name('inventory.index');
+        Route::resource('inventory', InventoryController::class);
     });
     
     Route::group(['middleware' => ['admin']], function () {
         Route::resource('annoucements', AnnoucementController::class);
-        Route::resource('gallery', GalleryController::class);
-        Route::resource('inventory', InventoryController::class);
+        
+        Route::post('requestinventory/{requestinventory}', [InventoryController::class, 'verification'])->name('requestinventory.verification');
+        
     });    
 });
