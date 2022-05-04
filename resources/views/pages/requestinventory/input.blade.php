@@ -26,11 +26,11 @@
                 <input type="date"class="form-control" name="date_of_end"id="validationBioBootstrap" name="Tambahannoucements"  required=""value="{{-- {{ $data->payback_time}} --}}">
             </div>
             <div class="mb-1">
-                <label class="d-block form-label" for="validationBioBootstrap">Deskripsi</label>
+                <label class="d-block form-label" for="validationBioBootstrap">Description</label>
                 <textarea class="form-control" name="description"id="validationBioBootstrap" name="Tambahannoucements" required value="{{-- {{ $data->description }} --}}"></textarea>
             </div><br>
-            <button type="submit" class="btn btn-primary waves-effect waves-float waves-light">save changes</button>
-            <a href="{{ route('requestinventory') }}" type="submit" class="btn btn-primary waves-effect waves-float waves-light">cancel</a>
+            <button type="submit" class="btn btn-primary waves-effect waves-float waves-light">Request</button>
+            <a href="{{ route('requestinventory.index') }}" type="submit" class="btn btn-primary waves-effect waves-float waves-light">cancel</a>
         </form>
     </div>
  </div>

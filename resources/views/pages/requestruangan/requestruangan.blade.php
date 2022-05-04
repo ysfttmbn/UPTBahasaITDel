@@ -13,7 +13,7 @@
                               <div class="me-1"><div id="DataTables_Table_0_filter" class="dataTables_filter"></div>
                             </div>
                             <div class="dt-buttons d-inline-flex mt-50">
-                              <a class="dt-button add-new btn btn-primary" href="#">
+                              <a class="dt-button add-new btn btn-primary" href="{{ route('requestruangan.create') }}">
                                   <span>Request</span> 
                               </a>
                             </div>
@@ -23,16 +23,18 @@
                       <table class="user-list-table table dataTable no-footer dtr-column" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
                             <thead class="table-light">
                                 <tr role="row">
-                                  <th class="control sorting_disabled" rowspan="1" colspan="1" style="width: 54.1125px; display: none;" aria-label=""></th>
+                                <th class="control sorting_disabled" rowspan="1" colspan="1" style="width: 54.1125px; display: none;" aria-label=""></th>
+                                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 183.475px;" aria-label="Billing: activate to sort column ascending">Room</th>
+                                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 183.475px;" aria-label="Billing: activate to sort column ascending">Nama Pengguna</th>
                                 <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 183.475px;" aria-label="Billing: activate to sort column ascending">Date of use</th>
                                 <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 183.475px;" aria-label="Billing: activate to sort column ascending">Time end</th>
-                                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 183.475px;" aria-label="Billing: activate to sort column ascending">Room</th>
-                                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 145px;" aria-label="Plan: activate to sort column ascending">Deskription</th>
+                                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 145px;" aria-label="Plan: activate to sort column ascending">Description</th>
                                 <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 185.688px;" aria-label="Actions">Actions</th>
                               </tr>
                             </thead>
                         <tbody>
                             <tr class="odd">
+                              <td valign="top" class="dataTables_empty"></td>
                               <td valign="top" class="dataTables_empty"></td>
                               <td valign="top" class="dataTables_empty"></td>
                               <td valign="top" class="dataTables_empty"></td>

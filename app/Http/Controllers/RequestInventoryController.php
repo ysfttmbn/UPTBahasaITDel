@@ -10,10 +10,6 @@ use App\Models\User;
 
 class RequestInventoryController extends Controller
 {   
-    // public function requestinventory(){
-	// 	return view('pages.requestinventory.requestinventory');
-	// }
-
     /**
      * Display a listing of the resource.
      *

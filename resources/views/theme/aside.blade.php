@@ -62,7 +62,7 @@
                 </li>
                 <li><a class="d-flex align-items-center" href="{{ route('requestinventory.index') }}"><span class="menu-item text-truncate" data-i18n="Deactivate Account">Request Inventori</span></a>
                 </li>
-                <li><a class="d-flex align-items-center" href="{{ route('requestruangan') }}"><span class="menu-item text-truncate" data-i18n="Invoice">Request Ruangan</span></a>
+                <li><a class="d-flex align-items-center" href="{{ route('requestruangan.index') }}"><span class="menu-item text-truncate" data-i18n="Invoice">Request Ruangan</span></a>
                 </li>
               </ul>
             </li>
@@ -76,7 +76,7 @@
                   </li>
                   <li><a class="d-flex align-items-center" href="{{ route('requestinventory.index') }}"><span class="menu-item text-truncate" data-i18n="Deactivate Account">Request Inventori</span></a>
                   </li>
-                  <li><a class="d-flex align-items-center" href="{{ route('requestruangan') }}"><span class="menu-item text-truncate" data-i18n="Invoice">Request Ruangan</span></a>
+                  <li><a class="d-flex align-items-center" href="{{ route('requestruangan.index') }}"><span class="menu-item text-truncate" data-i18n="Invoice">Request Ruangan</span></a>
                   </li>
               </ul>
             </li>
