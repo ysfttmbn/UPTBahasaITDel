@@ -4,13 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\RequestInventory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Models\User;
+
 
 class RequestInventoryController extends Controller
 {   
-    // public function requestinventory(){
-	// 	return view('pages.requestinventory.requestinventory');
-	// }
-
     /**
      * Display a listing of the resource.
      *
@@ -28,7 +27,8 @@ class RequestInventoryController extends Controller
      */
     public function create()
     {
-        return view('pages.requestinventory.input');
+        $data = User::all();
+        return view('pages.requestinventory.input', ['data' => new RequestInventory, 'users'=>$data]);
     }
 
     /**
@@ -39,6 +39,7 @@ class RequestInventoryController extends Controller
      */
     public function store(Request $request)
     {
+        dd($request->all());
         $request->validate([
             'books' => 'required',
             'date_of_use' => 'required',
@@ -59,7 +60,7 @@ class RequestInventoryController extends Controller
         $requestinventory->description = $request->description;
 
         $requestinventory->save();
-        return redirect('dashboard');
+        return redirect('requestinventory');
     }
 
     /**

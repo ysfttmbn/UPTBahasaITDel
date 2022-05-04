@@ -1,4 +1,6 @@
-<x-auth-layout title="annoucements">
+<x-web-layout title="annoucements">
+    <div class="app-content content ">
+    <div class="content-overlay"></div>
     <div class="card">
     <div class="card-header">
         <h4 class="card-title">Add annoucements</h4>
@@ -36,4 +38,4 @@
         </form>
     </div>
  </div>
-</x-auth-layout>
+</x-web-layout>

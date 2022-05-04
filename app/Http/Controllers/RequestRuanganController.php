@@ -4,13 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\RequestRuangan;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class RequestRuanganController extends Controller
 {
-    public function requestruangan(){
-		return view('pages.requestruangan.requestruangan');
-	}
-
     /**
      * Display a listing of the resource.
      *
@@ -18,7 +16,7 @@ class RequestRuanganController extends Controller
      */
     public function index()
     {
-        //
+        return view('pages.requestruangan.requestruangan');
     }
 
     /**
@@ -28,7 +26,8 @@ class RequestRuanganController extends Controller
      */
     public function create()
     {
-        //
+        $data = User::all();
+        return view('pages.requestruangan.input', ['data' => new RequestRuangan, 'users'=>$data]);
     }
 
     /**
@@ -39,7 +38,28 @@ class RequestRuanganController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request->all());
+        $request->validate([
+            'books' => 'required',
+            'date_of_use' => 'required',
+            'payback_time' => 'required',
+            'description' => 'required',
+        ]);
+
+        $file = $request->file('file');
+        $namaFile =$file->getClientOriginalName();
+        $tujuanFile = 'file';
+        $file->move($tujuanFile,$namaFile);
+
+        $requestinventory = new RequestRuangan;
+        $requestinventory->id_user = Auth::User()->id;
+        $requestinventory->books = $request->books;
+        $requestinventory->date_of_use = $request->date_of_use;
+        $requestinventory->payback_time = $request->payback_time;
+        $requestinventory->description = $request->description;
+
+        $requestinventory->save();
+        return redirect('requestinventory');
     }
 
     /**

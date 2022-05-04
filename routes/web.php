@@ -20,6 +20,7 @@ Route::group(['domain' => ''], function() {
         Route::get('reset/{token}',[AuthController::class, 'reset'])->name('getreset');
         Route::post('reset',[AuthController::class, 'do_reset'])->name('reset');
     });
+   
     Route::middleware(['auth:web'])->group(function(){
         Route::redirect('/', 'dashboard', 301);
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
@@ -31,21 +32,14 @@ Route::group(['domain' => ''], function() {
         Route::get('kelasbahasainggris', [LayananController::class, 'kelasbahasainggris'])->name('kelasbahasainggris');
         Route::get('ujiantoefl', [LayananController::class, 'ujiantoefl'])->name('ujiantoefl');
         Route::get('penerjemah', [LayananController::class, 'penerjemah'])->name('penerjemah');
-
-        //Route::get('requestinventory', [LayananController::class, 'requestinventory'])->name('requestinventory');
         Route::resource('requestinventory', RequestInventoryController::class);
-        Route::get('requestruangan', [LayananController::class, 'requestruangan'])->name('requestruangan');
+        Route::resource('requestruangan', RequestRuanganController::class);
         Route::post('conversation/{conversation}', [ConversationController::class, 'reply'])->name('conversation.reply');
         Route::resource('conversation', ConversationController::class);
-        // Route::post('conversation', [ConversationController::class, 'store'])->name('conversation.store');
         
-
-        //Route::get('requestinventory', [RequestInventoryController::class, 'requestinventory'])->name('requestinventory');
-        Route::get('requestruangan', [RequestRuanganController::class, 'requestruangan'])->name('requestruangan');
-
     });
+    
     Route::group(['middleware' => ['admin']], function () {
         Route::resource('annoucements', AnnoucementController::class);
-        // Route::resource('conversation', ConversationController::class);
     });    
 });
