@@ -3,13 +3,14 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\LayananController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\InventoryController;
 use App\Http\Controllers\AnnoucementController;
 use App\Http\Controllers\ConversationController;
-use App\Http\Controllers\GaleryController;
-use App\Http\Controllers\LayananController;
-use App\Http\Controllers\RequestInventoryController;
 use App\Http\Controllers\RequestRuanganController;
+use App\Http\Controllers\RequestInventoryController;
 
 Route::group(['domain' => ''], function() {
     Route::get('auth',[AuthController::class, 'index'])->name('auth.index');
@@ -28,7 +29,7 @@ Route::group(['domain' => ''], function() {
         Route::resource('annoucements', AnnoucementController::class);
         Route::get('background', [HomeController::class, 'background'])->name('background');
         Route::get('staff', [HomeController::class, 'staff'])->name('staff');
-        Route::get('galery', [GaleryController::class, 'galery'])->name('galery');
+        Route::get('gallery', [GalleryController::class, 'index'])->name('galery.index');
         Route::get('kelasbahasainggris', [LayananController::class, 'kelasbahasainggris'])->name('kelasbahasainggris');
         Route::get('ujiantoefl', [LayananController::class, 'ujiantoefl'])->name('ujiantoefl');
         Route::get('penerjemah', [LayananController::class, 'penerjemah'])->name('penerjemah');
@@ -41,5 +42,7 @@ Route::group(['domain' => ''], function() {
     
     Route::group(['middleware' => ['admin']], function () {
         Route::resource('annoucements', AnnoucementController::class);
+        Route::resource('gallery', GalleryController::class);
+        Route::resource('inventory', InventoryController::class);
     });    
 });
