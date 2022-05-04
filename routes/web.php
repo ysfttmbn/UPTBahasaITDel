@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AnnoucementController;
+use App\Http\Controllers\ConversationController;
 use App\Http\Controllers\GaleryController;
 use App\Http\Controllers\LayananController;
 
@@ -28,10 +29,18 @@ Route::group(['domain' => ''], function() {
         Route::get('kelasbahasainggris', [LayananController::class, 'kelasbahasainggris'])->name('kelasbahasainggris');
         Route::get('ujiantoefl', [LayananController::class, 'ujiantoefl'])->name('ujiantoefl');
         Route::get('penerjemah', [LayananController::class, 'penerjemah'])->name('penerjemah');
+<<<<<<< Updated upstream
         Route::get('requestinventory', [LayananController::class, 'requestinventory'])->name('requestinventory');
         Route::get('requestruangan', [LayananController::class, 'requestruangan'])->name('requestruangan');
+=======
+        Route::post('conversation/{conversation}', [ConversationController::class, 'reply'])->name('conversation.reply');
+        Route::resource('conversation', ConversationController::class);
+        // Route::post('conversation', [ConversationController::class, 'store'])->name('conversation.store');
+        
+>>>>>>> Stashed changes
     });
     Route::group(['middleware' => ['admin']], function () {
         Route::resource('annoucements', AnnoucementController::class);
+        // Route::resource('conversation', ConversationController::class);
     });    
 });

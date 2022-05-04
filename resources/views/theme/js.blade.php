@@ -17,4 +17,16 @@
     <script src="app-assets/js/scripts/customizer.min.js"></script>
     <!-- END: Theme JS-->
 
-    <!-- BEGIN: Page JS-->
+   <!-- BEGIN: Page JS-->
+   <script src="{{ asset('app-assets/js/scripts/pages/app-chat.js') }}"></script>
+   <!-- END: Page JS-->
+   <script>
+    $(window).on('load', function() {
+        if (feather) {
+            feather.replace({
+                width: 14,
+                height: 14
+            });
+        }
+    })
+</script>
