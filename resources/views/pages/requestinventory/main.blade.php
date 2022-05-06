@@ -55,7 +55,7 @@
                           <td valign="top" class="dataTables_empty">{{ $item->description }}</td>
                           <td>
                           <div class="d-inline-flex">
-                            @if(Auth::user()->isUsers == 'user_id')
+                            @if(Auth::user()->id)
                                 <a class="pe-1 dropdown-toggle hide-arrow text-primary" data-bs-toggle="dropdown" aria-expanded="false">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical font-small-4">
                                         <circle cx="12" cy="12" r="1"></circle>
