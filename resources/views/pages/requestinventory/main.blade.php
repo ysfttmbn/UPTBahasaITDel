@@ -38,7 +38,7 @@
                         <tbody>
                           @foreach ($requestinventory as $item)
                           <tr class="odd">
-                          <td valign="top" class="dataTables_empty">{{ $item->inventory->tilte }}</td>
+                          <td valign="top" class="dataTables_empty">{{ $item->inventory->name }}</td>
                           <td valign="top" class="dataTables_empty">{{ $item->date_of_use }}</td>
                           <td valign="top" class="dataTables_empty">{{ $item->time_end }}</td>
                           @php

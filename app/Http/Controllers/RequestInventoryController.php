@@ -29,20 +29,15 @@ class RequestInventoryController extends Controller
         $request->validate([
             'inventory' => 'required',
             'date_of_use' => 'required',
-            'payback_time' => 'required',
+            'date_of_end' => 'required',
             'description' => 'required',
         ]);
 
-        $file = $request->file('file');
-        $namaFile =$file->getClientOriginalName();
-        $tujuanFile = 'file';
-        $file->move($tujuanFile,$namaFile);
-
         $requestinventory = new RequestInventory;
-        $request->inventory_id = $request->inventory;
-        $requestinventory->id_user = Auth::User()->id;
+        $requestinventory->inventory_id = $request->inventory;
+        $requestinventory->user_id = Auth::User()->id;
         $requestinventory->date_of_use = $request->date_of_use;
-        $requestinventory->payback_time = $request->payback_time;
+        $requestinventory->time_end = $request->date_of_end;
         $requestinventory->description = $request->description;
 
         $requestinventory->save();

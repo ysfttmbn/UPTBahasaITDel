@@ -13,9 +13,11 @@
                               <div class="me-1"><div id="DataTables_Table_0_filter" class="dataTables_filter"></div>
                             </div>
                             <div class="dt-buttons d-inline-flex mt-50">
+                              @if(!Auth::User()->isAdmin)
                               <a class="dt-button add-new btn btn-primary" href="{{ route('requestruangan.create') }}">
                                   <span>Request</span> 
                               </a>
+                              @endif
                             </div>
                           </div>
                         </div>
