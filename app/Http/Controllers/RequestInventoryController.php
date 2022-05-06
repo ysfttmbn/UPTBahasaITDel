@@ -13,7 +13,7 @@ class RequestInventoryController extends Controller
 {   
     public function index()
     {
-        $requestinventory = RequestInventory::all();
+        $requestinventory = RequestInventory::where('user_id', Auth::user()->id);
         return view('pages.requestinventory.main', compact('requestinventory'));
     }
 
