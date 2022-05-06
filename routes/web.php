@@ -12,20 +12,20 @@ use App\Http\Controllers\ConversationController;
 use App\Http\Controllers\RequestRuanganController;
 use App\Http\Controllers\RequestInventoryController;
 
-Route::group(['domain' => ''], function() {
-    Route::get('auth',[AuthController::class, 'index'])->name('auth.index');
-    Route::prefix('auth')->name('auth.')->group(function(){
-        Route::post('login',[AuthController::class, 'do_login'])->name('login');
-        Route::post('register',[AuthController::class, 'do_register'])->name('register');
-        Route::post('forgot',[AuthController::class, 'do_forgot'])->name('forgot');
-        Route::get('reset/{token}',[AuthController::class, 'reset'])->name('getreset');
-        Route::post('reset',[AuthController::class, 'do_reset'])->name('reset');
+Route::group(['domain' => ''], function () {
+    Route::get('auth', [AuthController::class, 'index'])->name('auth.index');
+    Route::prefix('auth')->name('auth.')->group(function () {
+        Route::post('login', [AuthController::class, 'do_login'])->name('login');
+        Route::post('register', [AuthController::class, 'do_register'])->name('register');
+        Route::post('forgot', [AuthController::class, 'do_forgot'])->name('forgot');
+        Route::get('reset/{token}', [AuthController::class, 'reset'])->name('getreset');
+        Route::post('reset', [AuthController::class, 'do_reset'])->name('reset');
     });
-   
-    Route::middleware(['auth:web'])->group(function(){
+
+    Route::middleware(['auth:web'])->group(function () {
         Route::redirect('/', 'dashboard', 301);
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
-        Route::get('logout',[AuthController::class, 'do_logout'])->name('auth.logout');
+        Route::get('logout', [AuthController::class, 'do_logout'])->name('auth.logout');
         Route::resource('annoucements', AnnoucementController::class);
         Route::get('background', [HomeController::class, 'background'])->name('background');
         Route::get('staff', [HomeController::class, 'staff'])->name('staff');
@@ -38,14 +38,11 @@ Route::group(['domain' => ''], function() {
         Route::post('conversation/{conversation}', [ConversationController::class, 'reply'])->name('conversation.reply');
         Route::resource('conversation', ConversationController::class);
         Route::resource('gallery', GalleryController::class);
-        // Route::get('inventory', [InventoryController::class, 'index'])->name('inventory.index');
         Route::resource('inventory', InventoryController::class);
     });
-    
+
     Route::group(['middleware' => ['admin']], function () {
         Route::resource('annoucements', AnnoucementController::class);
-        
-        Route::post('requestinventory/{requestinventory}', [InventoryController::class, 'verification'])->name('requestinventory.verification');
-        
-    });    
+        Route::patch('requestinventory/{requestinventory}', [RequestInventoryController::class, 'verification'])->name('requestinventory.verification');
+    });
 });

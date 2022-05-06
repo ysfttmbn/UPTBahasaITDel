@@ -41,12 +41,12 @@
     </div>
     @else
     <div class="card-body">
-        <form class="needs-validation" novalidate="" action="{{ route('requestinventory.verification', $data->id) }}" method="POST" enctype="multipart/form-data">
+        <form class="needs-validation" action="{{ route('requestinventory.verification', $data->id) }}" method="POST">
             @method('PATCH')
             @csrf
             <div class="mb-1">
                 <label class="d-block form-label" for="validationBioBootstrap">Status</label>
-                <select type="select" class="form-control" name="room"id="validationBioBootstrap" required="" value="{{ $data->room}}">
+                <select type="select" class="form-control" name="status" id="validationBioBootstrap">
                     <option>Pilih Status</option>
                     <option value="2">Setujui</option>
                     <option value="3">Tolak</option>

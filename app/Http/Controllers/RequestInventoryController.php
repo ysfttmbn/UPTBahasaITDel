@@ -10,22 +10,21 @@ use App\Models\User;
 
 
 class RequestInventoryController extends Controller
-{   
+{
     public function index()
     {
-        $requestinventory = RequestInventory::where('user_id', Auth::user()->id);
+        $requestinventory = RequestInventory::all();
         return view('pages.requestinventory.main', compact('requestinventory'));
     }
 
     public function create()
     {
         $data = Inventory::all();
-        return view('pages.requestinventory.input', ['data' => new RequestInventory, 'inventories'=>$data]);
+        return view('pages.requestinventory.input', ['data' => new RequestInventory, 'inventories' => $data]);
     }
 
     public function store(Request $request)
     {
-        // dd($request->all());
         $request->validate([
             'inventory' => 'required',
             'date_of_use' => 'required',
@@ -52,7 +51,7 @@ class RequestInventoryController extends Controller
     public function edit(RequestInventory $requestinventory)
     {
         $data = Inventory::all();
-        return view('pages.requestinventory.input', ['data' => $requestinventory, 'inventories'=>$data]);
+        return view('pages.requestinventory.input', ['data' => $requestinventory, 'inventories' => $data]);
     }
 
     public function verification(Request $request, RequestInventory $requestinventory)
@@ -71,9 +70,9 @@ class RequestInventoryController extends Controller
         ]);
 
         $file = $request->file('file');
-        $namaFile =$file->getClientOriginalName();
+        $namaFile = $file->getClientOriginalName();
         $tujuanFile = 'file';
-        $file->move($tujuanFile,$namaFile);
+        $file->move($tujuanFile, $namaFile);
         $requestinventory->id_user = Auth::User()->id;
         $requestinventory->books = $request->books;
         $requestinventory->date_of_use = $request->date_of_use;

@@ -55,7 +55,7 @@
                           <td valign="top" class="dataTables_empty">{{ $item->description }}</td>
                           <td>
                           <div class="d-inline-flex">
-                            @if(!Auth::user()->isAdmin)
+                            @if(Auth::user()->id == $item->user_id)
                                 <a class="pe-1 dropdown-toggle hide-arrow text-primary" data-bs-toggle="dropdown" aria-expanded="false">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical font-small-4">
                                         <circle cx="12" cy="12" r="1"></circle>
@@ -106,7 +106,7 @@
                         <tbody>
                           @foreach ($requestinventory as $item)
                         <tr class="odd">
-                          <td valign="top" class="dataTables_empty">{{ $item->inventory->tilte }}</td>
+                          <td valign="top" class="dataTables_empty">{{ $item->inventory->name }}</td>
                           <td valign="top" class="dataTables_empty">{{ $item->date_of_use }}</td>
                           <td valign="top" class="dataTables_empty">{{ $item->time_end }}</td>
                           @php
@@ -122,12 +122,14 @@
                           <td valign="top" class="dataTables_empty">{{ $status }}</td>
                           <td valign="top" class="dataTables_empty">{{ $item->description }}</td>
                           <td>
-                            <a href="{{ route('requestinventory.verification', $item->id) }}" class="dropdown-item delete-record">
+                            @if ($item->status == 1)
+                            <a href="{{ route('requestinventory.edit', $item->id) }}" class="dropdown-item delete-record">
                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit font-small-4">
                                   <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
                                   <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
                               </svg>Edit
-                          </a>
+                            </a>
+                            @endif
                           </td>
                         </tr> 
                         @endforeach                         
