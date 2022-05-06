@@ -55,6 +55,7 @@
                           <td valign="top" class="dataTables_empty">{{ $item->description }}</td>
                           <td>
                           <div class="d-inline-flex">
+                            @if(Auth::user()->isUsers == 'user_id')
                                 <a class="pe-1 dropdown-toggle hide-arrow text-primary" data-bs-toggle="dropdown" aria-expanded="false">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical font-small-4">
                                         <circle cx="12" cy="12" r="1"></circle>
@@ -70,6 +71,8 @@
                                         </svg>Edit
                                     </a>
                                     <form action="{{ route('requestinventory.destroy', $item->id) }}" method="post">
+                                      @csrf
+                                      @method('DELETE')
                                       <button type="submit" class="dropdown-item delete-record">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2 font-small-4 me-50">
                                             <polyline points="3 6 5 6 21 6"></polyline>
@@ -78,8 +81,9 @@
                                             <line x1="14" y1="11" x2="14" y2="17"></line>
                                         </svg>Delete
                                     </button>
-                                    </form>
+                                    </form> 
                                 </div>
+                                @endif
                               </div>
                             </td>
                           </tr> 
