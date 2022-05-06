@@ -27,8 +27,10 @@
                                 <tr role="row">
                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 183.475px;" aria-label="Billing: activate to sort column ascending">Nama Inventori</th>
                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 183.475px;" aria-label="Billing: activate to sort column ascending">Images</th>
+                                    @if(Auth::user()->isAdmin)
                                     <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 185.688px;" aria-label="Actions">Actions</th>
-                              </tr>
+                                    @endif
+                                  </tr>
                             </thead>
                         <tbody>
                             @foreach ($inventories as $item)

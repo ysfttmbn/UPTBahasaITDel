@@ -3,7 +3,7 @@
     <div class="content-overlay"></div>
     <div class="card">
     <div class="card-header">
-        <h4 class="card-title">Add Ativity</h4>
+        <h4 class="card-title">Add Activity</h4>
     </div>
     <div class="card-body">
         @If($data->id)
@@ -14,20 +14,20 @@
             @endif
             @csrf
             <div class="mb-1">
-                <label class="form-label" for="basic-addon-name">title activity</label>
+                <label class="form-label" for="basic-addon-name">Title activity</label>
                 <input type="text" name="title" id="basic-addon-name" class="form-control" placeholder="Judul" aria-label="Name" aria-describedby="basic-addon-name" required value="{{ $data->title }}">
             </div>
             <div class="mb-1">
-                <label for="customFile1" class="form-label">add images</label>
+                <label for="customFile1" class="form-label">Add images</label>
                 <input type="file" class="form-control" name="images" id="customFile1" required value="{{ $data->file }}">
             </div>
             <div class="mb-1">
-                <label class="d-block form-label" for="validationBioBootstrap">description</label>
+                <label class="d-block form-label" for="validationBioBootstrap">Description</label>
                 <textarea class="form-control" name="description"id="validationBioBootstrap" name="Description" required value="{{ $data->description }}"></textarea>
             </div>
             <br>
-            <button type="submit" class="btn btn-primary waves-effect waves-float waves-light">save changes</button>
-            <a href="{{ route('gallery.index') }}" class="btn btn-primary waves-effect waves-float waves-light">cancel</a>
+            <button type="submit" class="btn btn-primary waves-effect waves-float waves-light">Submit</button>
+            <a href="{{ route('gallery.index') }}" class="btn btn-primary waves-effect waves-float waves-light">Cancel</a>
         </form>
     </div>
  </div>

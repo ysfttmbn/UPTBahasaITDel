@@ -3,7 +3,7 @@
     <div class="content-overlay"></div>
     <div class="card">
     <div class="card-header">
-        <h4 class="card-title">Add Request</h4>
+        <h4 class="card-title">Request</h4>
     </div>
     <div class="card-body">
         @If($data->id)

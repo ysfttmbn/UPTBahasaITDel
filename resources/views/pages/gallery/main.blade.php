@@ -14,7 +14,7 @@
                     </a>
                     @endif
                 </div>
-               </div>
+               </div><br>
                <div class="row">
                    @foreach ($galleries as $item)
                     <div class="col-xl-4 col-lg-5 col-md-5 order-1 order-md-0">
