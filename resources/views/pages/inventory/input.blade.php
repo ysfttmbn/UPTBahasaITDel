@@ -18,12 +18,12 @@
                 <input type="text" name="name" id="basic-addon-name" class="form-control" placeholder="Nama Inventori" aria-label="Name" aria-describedby="basic-addon-name" required value="{{ $data->title }}">
             </div>
            <div class="mb-1">
-                <label for="customFile1" class="form-label">Tambahkan Gambar</label>
+                <label for="customFile1" class="form-label">add images</label>
                 <input type="file" class="form-control" name="images" id="customFile1" required value="{{ $data->file }}">
             </div>
             <br>
-            <button type="submit" class="btn btn-primary waves-effect waves-float waves-light">Tambah</button>
-            <a href="{{ route('inventory.index') }}" type="submit" class="btn btn-primary waves-effect waves-float waves-light">cancel</a>
+            <button type="submit" class="btn btn-primary waves-effect waves-float waves-light">Submit</button>
+            <a href="{{ route('inventory.index') }}" type="submit" class="btn btn-primary waves-effect waves-float waves-light">Cancel</a>
         </form>
     </div>
  </div>

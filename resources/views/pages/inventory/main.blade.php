@@ -25,7 +25,7 @@
                       <table class="user-list-table table dataTable no-footer dtr-column" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
                             <thead class="table-light">
                                 <tr role="row">
-                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 183.475px;" aria-label="Billing: activate to sort column ascending">Nama Inventori</th>
+                                    <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 183.475px;" aria-label="Billing: activate to sort column ascending">name </th>
                                     <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 183.475px;" aria-label="Billing: activate to sort column ascending">Images</th>
                                     @if(Auth::user()->isAdmin)
                                     <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 185.688px;" aria-label="Actions">Actions</th>
@@ -36,7 +36,7 @@
                             @foreach ($inventories as $item)
                             <tr class="odd">
                               <td valign="top" class="dataTables_empty">{{ $item->name }}</td>
-                              <td valign="top" class="dataTables_empty"><img src="{{ asset('file/'.$item->images) }}" alt=""></td>
+                              <td valign="top" class="dataTables_empty"><img src="{{ asset('file/'.$item->images) }}" alt=""  width="200px" height="150px"></td>
                               <td>
                                   @if(Auth::User()->isAdmin)
                                     <div div class="d-inline-flex">
