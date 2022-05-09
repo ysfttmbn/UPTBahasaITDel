@@ -13,7 +13,7 @@
                         <div class="card">
                             <div class="card-body d-flex align-items-center justify-content-between">
                                 <div>
-                                    <h3 class="fw-bolder mb-75">21,567</h3>
+                                    <h3 class="fw-bolder mb-75">3</h3>
                                     <span>Total Users</span>
                                 </div>
                                 <div class="avatar bg-light-primary p-50">
@@ -28,7 +28,7 @@
                         <div class="card">
                             <div class="card-body d-flex align-items-center justify-content-between">
                                 <div>
-                                    <h3 class="fw-bolder mb-75">4,567</h3>
+                                    <h3 class="fw-bolder mb-75">1</h3>
                                     <span>Inventory Borrowing</span>
                                 </div>
                                 <div class="avatar bg-light-danger p-50">
@@ -43,7 +43,7 @@
                         <div class="card">
                             <div class="card-body d-flex align-items-center justify-content-between">
                                 <div>
-                                    <h3 class="fw-bolder mb-75">19,860</h3>
+                                    <h3 class="fw-bolder mb-75">1</h3>
                                     <span>Room Borrowing</span>
                                 </div>
                                 <div class="avatar bg-light-success p-50">
