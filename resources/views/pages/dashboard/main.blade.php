@@ -92,7 +92,7 @@
                             <thead class="table-light">
                                 <tr role="row">
                                   <th class="control sorting_disabled" rowspan="1" colspan="1" style="width: 54.1125px; display: none;" aria-label=""></th>
-                                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 151.1px;" aria-sort="descending" aria-label="Name: activate to sort column ascending">ID annoucements</th>
+                                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 151.1px;" aria-sort="descending" aria-label="Name: activate to sort column ascending">ID Annoucements</th>
                                 <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 146.525px;" aria-label="Role: activate to sort column ascending">Title</th>
                                 <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 145px;" aria-label="Plan: activate to sort column ascending">Description</th>
                                 <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 183.475px;" aria-label="Billing: activate to sort column ascending">File</th>
@@ -107,7 +107,8 @@
 
                             @foreach($annoucements as $annocement)
                             <tr class="odd">
-                              <td valign="top" class="dataTables_empty">{{ $annocement->id }}</td>
+                              {{-- <td valign="top" class="dataTables_empty">{{ $annocement->id }}</td> --}}
+                              <td valign="top" class="dataTables_empty">{{ $loop->iteration }}</td>
                               <td valign="top" class="dataTables_empty">{{ $annocement->title }}</td>
                               <td valign="top" class="dataTables_empty">{{ $annocement->description }}</td>
                               <td valign="top" class="dataTables_empty"><a href="{{ asset('file/'. $annocement->file) }}" target="_blank">{{ $annocement->file }}</td>
