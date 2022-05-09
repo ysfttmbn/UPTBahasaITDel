@@ -8,7 +8,7 @@
                 <div class="col-md-6 col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Topik Percakapan</h4>
+                            <h4 class="card-title">conversation topic</h4>
                         </div>
                         <div class="card-body">
                             <form class="form form-horizontal" action="{{ route('conversation.store') }}" method="POST">
@@ -17,7 +17,7 @@
                                     <div class="col-12">
                                         <div class="mb-1 row">
                                             <div class="col-sm-3">
-                                                <label class="col-form-label" for="fname-icon">Pesan</label>
+                                                <label class="col-form-label" for="fname-icon">Massage</label>
                                             </div>
                                             <div class="col-sm-9">
                                                 <div class="input-group input-group-merge">
@@ -28,7 +28,7 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-9 offset-sm-3">
-                                        <button type="submit" class="btn btn-primary me-1 waves-effect waves-float waves-light">Kirim</button>
+                                        <button type="submit" class="btn btn-primary me-1 waves-effect waves-float waves-light">Sent</button>
                                         <button type="reset" class="btn btn-outline-secondary waves-effect">Reset</button>
                                     </div>
                                 </div>
@@ -39,7 +39,7 @@
                 <div class="col-md-6 col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Percakapan</h4>
+                            <h4 class="card-title">conversation</h4>
                         </div>
                         <div class="card-body">
                             @foreach($conversation as $data)
@@ -82,11 +82,11 @@
                                     <form action="{{ route('conversation.reply', $data->id) }}" method="POST">
                                         @csrf
                                         <fieldset class="mb-75">
-                                            <label class="form-label" for="label-textarea">Balas</label>
+                                            <label class="form-label" for="label-textarea">Reply</label>
                                             <textarea name="message" class="form-control" id="label-textarea" rows="3" placeholder="Add message"></textarea>
                                         </fieldset>
                                         <!--/ comment box -->
-                                        <button type="sumbit" class="btn btn-sm btn-primary waves-effect waves-float waves-light">Kirim</button>
+                                        <button type="sumbit" class="btn btn-sm btn-primary waves-effect waves-float waves-light">send</button>
                                     </form>
                                 </div>
                             @endforeach

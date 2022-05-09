@@ -15,7 +15,7 @@
         @endif
             @csrf
             <div class="mb-1">
-                <label class="d-block form-label" for="validationBioBootstrap">Inventori</label>
+                <label class="d-block form-label" for="validationBioBootstrap">Inventory</label>
                 <select type="select" class="form-control" name="inventory"id="validationBioBootstrap" required="" value="{{ $data->room}}">
                     <option>Pilih Inventori</option>
                     @foreach($inventories as $item)

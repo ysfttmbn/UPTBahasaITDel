@@ -33,50 +33,50 @@
 
         <li class=" nav-item"><a class="d-flex align-items-center" href="{{ route('gallery.index') }}">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-image"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
-            <span class="menu-title text-truncate" data-i18n="File Manager">Galery</span>
+            <span class="menu-title text-truncate" data-i18n="File Manager">Gallery</span>
         </a>
         </li>
 
         <li class=" nav-item"><a class="d-flex align-items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-            <span class="menu-title text-truncate" data-i18n="Pages">Layanan</span>
+            <span class="menu-title text-truncate" data-i18n="Pages">our service</span>
         </a>
           <ul class="menu-content">
-            <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Account Settings">Umum</span></a>
+            <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Account Settings">public</span></a>
               <ul class="menu-content">
-                <li><a class="d-flex align-items-center" href="{{ route('kelasbahasainggris') }}"><span class="menu-item text-truncate" data-i18n="Account">Kelas Bahasa Inggris</span></a>
+                <li><a class="d-flex align-items-center" href="{{ route('kelasbahasainggris') }}"><span class="menu-item text-truncate" data-i18n="Account">English class</span></a>
                 </li>
-                <li><a class="d-flex align-items-center" href="{{ route('ujiantoefl') }}"><span class="menu-item text-truncate" data-i18n="Security">Ujian TOEFL</span></a>
+                <li><a class="d-flex align-items-center" href="{{ route('ujiantoefl') }}"><span class="menu-item text-truncate" data-i18n="Security"> TOEFL</span></a>
                 </li>
-                <li><a class="d-flex align-items-center" href="{{ route('penerjemah') }}"><span class="menu-item text-truncate" data-i18n="Billings &amp; Plans">Penerjemah</span></a>
+                <li><a class="d-flex align-items-center" href="{{ route('penerjemah') }}"><span class="menu-item text-truncate" data-i18n="Billings &amp; Plans">Translation</span></a>
                 </li>
               </ul>
             </li>
-            <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Mail Template">Mahasiswa</span></a>
+            <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Mail Template">student</span></a>
               <ul class="menu-content">
-                <li><a class="d-flex align-items-center" href="{{ route('kelasbahasainggris') }}"><span class="menu-item text-truncate" data-i18n="Welcome">Kelas Bahasa Inggris</span></a>
+                <li><a class="d-flex align-items-center" href="{{ route('kelasbahasainggris') }}"><span class="menu-item text-truncate" data-i18n="Welcome">English class</span></a>
                 </li>
-                <li><a class="d-flex align-items-center" href="{{ route('ujiantoefl') }}"><span class="menu-item text-truncate" data-i18n="Reset Password">Ujian TOEFL</span></a>
+                <li><a class="d-flex align-items-center" href="{{ route('ujiantoefl') }}"><span class="menu-item text-truncate" data-i18n="Reset Password"> TOEFL</span></a>
                 </li>
-                <li><a class="d-flex align-items-center" href="{{ route('penerjemah') }}"><span class="menu-item text-truncate" data-i18n="Verify Email">Penerjemah</span></a>
+                <li><a class="d-flex align-items-center" href="{{ route('penerjemah') }}"><span class="menu-item text-truncate" data-i18n="Verify Email">Translation</span></a>
                 </li>
-                <li><a class="d-flex align-items-center" href="{{ route('requestinventory.index') }}"><span class="menu-item text-truncate" data-i18n="Deactivate Account">Request Inventori</span></a>
+                <li><a class="d-flex align-items-center" href="{{ route('requestinventory.index') }}"><span class="menu-item text-truncate" data-i18n="Deactivate Account">Request Inventory</span></a>
                 </li>
-                <li><a class="d-flex align-items-center" href="{{ route('requestruangan.index') }}"><span class="menu-item text-truncate" data-i18n="Invoice">Request Ruangan</span></a>
+                <li><a class="d-flex align-items-center" href="{{ route('requestruangan.index') }}"><span class="menu-item text-truncate" data-i18n="Invoice">Request Room</span></a>
                 </li>
               </ul>
             </li>
-            <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Miscellaneous">Dosen/Staff</span></a>
+            <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Miscellaneous">lecturer/Staff</span></a>
               <ul class="menu-content">
-                  <li><a class="d-flex align-items-center" href="{{ route('kelasbahasainggris') }}"><span class="menu-item text-truncate" data-i18n="Welcome">Kelas Bahasa Inggris</span></a>
+                  <li><a class="d-flex align-items-center" href="{{ route('kelasbahasainggris') }}"><span class="menu-item text-truncate" data-i18n="Welcome">English class</span></a>
                   </li>
-                  <li><a class="d-flex align-items-center" href="{{ route('ujiantoefl') }}"><span class="menu-item text-truncate" data-i18n="Reset Password">Ujian TOEFL</span></a>
+                  <li><a class="d-flex align-items-center" href="{{ route('ujiantoefl') }}"><span class="menu-item text-truncate" data-i18n="Reset Password">TOEFL</span></a>
                   </li>
-                  <li><a class="d-flex align-items-center" href="{{ route('penerjemah') }}"><span class="menu-item text-truncate" data-i18n="Verify Email">Penerjemah</span></a>
+                  <li><a class="d-flex align-items-center" href="{{ route('penerjemah') }}"><span class="menu-item text-truncate" data-i18n="Verify Email">Translation</span></a>
                   </li>
-                  <li><a class="d-flex align-items-center" href="{{ route('requestinventory.index') }}"><span class="menu-item text-truncate" data-i18n="Deactivate Account">Request Inventori</span></a>
+                  <li><a class="d-flex align-items-center" href="{{ route('requestinventory.index') }}"><span class="menu-item text-truncate" data-i18n="Deactivate Account">Request Inventory</span></a>
                   </li>
-                  <li><a class="d-flex align-items-center" href="{{ route('requestruangan.index') }}"><span class="menu-item text-truncate" data-i18n="Invoice">Request Ruangan</span></a>
+                  <li><a class="d-flex align-items-center" href="{{ route('requestruangan.index') }}"><span class="menu-item text-truncate" data-i18n="Invoice">Request Room</span></a>
                   </li>
               </ul>
             </li>        
