@@ -6,7 +6,10 @@
         <div class="content-body">
             <div class="row">
                 <div class="col-md-6 col-12">
-                    <div class="card">
+                    <div>
+                        <button class="btn-icon btn btn-primary btn-round btn-sm dropdown-toggle waves-effect waves-float waves-light" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button>
+                    </div> <br>
+                    <div class="card"> 
                         <div class="card-header">
                             <h4 class="card-title">conversation topic</h4>
                         </div>
@@ -79,11 +82,14 @@
                                     <!--/ comments -->
 
                                     <!-- comment box -->
+                                    <button class="btn btn-primary me-1 waves-effect waves-float waves-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="true" aria-controls="collapseExample">
+                                        Reply
+                                    </button>
                                     <form action="{{ route('conversation.reply', $data->id) }}" method="POST">
                                         @csrf
                                         <fieldset class="mb-75">
-                                            <label class="form-label" for="label-textarea">Reply</label>
-                                            <textarea name="message" class="form-control" id="label-textarea" rows="3" placeholder="Add message"></textarea>
+                                            <label class="form-label" for="label-textarea">add massage</label>
+                                            <textarea name="message" class="form-control" id="label-textarea" rows="3" placeholder="Add massage"></textarea>
                                         </fieldset>
                                         <!--/ comment box -->
                                         <button type="sumbit" class="btn btn-sm btn-primary waves-effect waves-float waves-light">send</button>

@@ -15,10 +15,10 @@
                             <div class="dt-buttons d-inline-flex mt-50">
                                 @if(Auth::User()->isAdmin)
                               <a class="dt-button add-new btn btn-primary" href="{{ route('inventory.create') }}">
-                                  <span>Inventory</span> 
+                                  <span>Add Inventory</span> 
                               </a>
                               @endif
-                            </div>
+                            </div> 
                           </div>
                         </div>
                       </div>
