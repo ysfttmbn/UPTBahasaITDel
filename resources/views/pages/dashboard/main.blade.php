@@ -13,7 +13,7 @@
                         <div class="card">
                             <div class="card-body d-flex align-items-center justify-content-between">
                                 <div>
-                                    <h3 class="fw-bolder mb-75">21,567</h3>
+                                    <h3 class="fw-bolder mb-75">3</h3>
                                     <span>Total Users</span>
                                 </div>
                                 <div class="avatar bg-light-primary p-50">
@@ -28,7 +28,7 @@
                         <div class="card">
                             <div class="card-body d-flex align-items-center justify-content-between">
                                 <div>
-                                    <h3 class="fw-bolder mb-75">4,567</h3>
+                                    <h3 class="fw-bolder mb-75">1</h3>
                                     <span>Inventory Borrowing</span>
                                 </div>
                                 <div class="avatar bg-light-danger p-50">
@@ -43,7 +43,7 @@
                         <div class="card">
                             <div class="card-body d-flex align-items-center justify-content-between">
                                 <div>
-                                    <h3 class="fw-bolder mb-75">19,860</h3>
+                                    <h3 class="fw-bolder mb-75">1</h3>
                                     <span>Room Borrowing</span>
                                 </div>
                                 <div class="avatar bg-light-success p-50">
@@ -92,7 +92,7 @@
                             <thead class="table-light">
                                 <tr role="row">
                                   <th class="control sorting_disabled" rowspan="1" colspan="1" style="width: 54.1125px; display: none;" aria-label=""></th>
-                                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 151.1px;" aria-sort="descending" aria-label="Name: activate to sort column ascending">ID annoucements</th>
+                                <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 151.1px;" aria-sort="descending" aria-label="Name: activate to sort column ascending">ID Annoucements</th>
                                 <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 146.525px;" aria-label="Role: activate to sort column ascending">Title</th>
                                 <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 145px;" aria-label="Plan: activate to sort column ascending">Description</th>
                                 <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 183.475px;" aria-label="Billing: activate to sort column ascending">File</th>
@@ -107,7 +107,8 @@
 
                             @foreach($annoucements as $annocement)
                             <tr class="odd">
-                              <td valign="top" class="dataTables_empty">{{ $annocement->id }}</td>
+                              {{-- <td valign="top" class="dataTables_empty">{{ $annocement->id }}</td> --}}
+                              <td valign="top" class="dataTables_empty">{{ $loop->iteration }}</td>
                               <td valign="top" class="dataTables_empty">{{ $annocement->title }}</td>
                               <td valign="top" class="dataTables_empty">{{ $annocement->description }}</td>
                               <td valign="top" class="dataTables_empty"><a href="{{ asset('file/'. $annocement->file) }}" target="_blank">{{ $annocement->file }}</td>

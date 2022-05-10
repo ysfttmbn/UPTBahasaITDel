@@ -2,7 +2,7 @@
 <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
     <div class="navbar-header">
       <ul class="nav navbar-nav flex-row">
-        <li class="nav-item me-auto"><a class="navbar-brand" href="{{ route('dashboard') }}"><span class="brand-logo">
+        <li class="nav-item me-auto"><a class="navbar-brand" href="{{ route('background') }}"><span class="brand-logo">
               <img src="{{ asset('img/Logo.jpg') }}"></span>
             <h2 class="brand-text">UPT Bahasa</h2></a></li>
         <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pe-0" data-bs-toggle="collapse"><i class="d-block d-xl-none text-primary toggle-icon font-medium-4" data-feather="x"></i><i class="d-none d-xl-block collapse-toggle-icon font-medium-4  text-primary" data-feather="disc" data-ticon="disc"></i></a></li>
@@ -39,24 +39,24 @@
 
         <li class=" nav-item"><a class="d-flex align-items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-            <span class="menu-title text-truncate" data-i18n="Pages">our service</span>
+            <span class="menu-title text-truncate" data-i18n="Pages">Our service</span>
         </a>
           <ul class="menu-content">
-            <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Account Settings">public</span></a>
+            <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Account Settings">Public</span></a>
               <ul class="menu-content">
                 <li><a class="d-flex align-items-center" href="{{ route('kelasbahasainggris') }}"><span class="menu-item text-truncate" data-i18n="Account">English class</span></a>
                 </li>
-                <li><a class="d-flex align-items-center" href="{{ route('ujiantoefl') }}"><span class="menu-item text-truncate" data-i18n="Security"> TOEFL</span></a>
+                <li><a class="d-flex align-items-center" href="{{ route('ujiantoefl') }}"><span class="menu-item text-truncate" data-i18n="Security">TOEFL</span></a>
                 </li>
                 <li><a class="d-flex align-items-center" href="{{ route('penerjemah') }}"><span class="menu-item text-truncate" data-i18n="Billings &amp; Plans">Translation</span></a>
                 </li>
               </ul>
             </li>
-            <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Mail Template">student</span></a>
+            <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Mail Template">Student</span></a>
               <ul class="menu-content">
                 <li><a class="d-flex align-items-center" href="{{ route('kelasbahasainggris') }}"><span class="menu-item text-truncate" data-i18n="Welcome">English class</span></a>
                 </li>
-                <li><a class="d-flex align-items-center" href="{{ route('ujiantoefl') }}"><span class="menu-item text-truncate" data-i18n="Reset Password"> TOEFL</span></a>
+                <li><a class="d-flex align-items-center" href="{{ route('ujiantoefl') }}"><span class="menu-item text-truncate" data-i18n="Reset Password">TOEFL</span></a>
                 </li>
                 <li><a class="d-flex align-items-center" href="{{ route('penerjemah') }}"><span class="menu-item text-truncate" data-i18n="Verify Email">Translation</span></a>
                 </li>
@@ -66,7 +66,7 @@
                 </li>
               </ul>
             </li>
-            <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Miscellaneous">lecturer/Staff</span></a>
+            <li><a class="d-flex align-items-center" href="#"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Miscellaneous">Lecturer/Staff</span></a>
               <ul class="menu-content">
                   <li><a class="d-flex align-items-center" href="{{ route('kelasbahasainggris') }}"><span class="menu-item text-truncate" data-i18n="Welcome">English class</span></a>
                   </li>
@@ -79,16 +79,21 @@
                   <li><a class="d-flex align-items-center" href="{{ route('requestruangan.index') }}"><span class="menu-item text-truncate" data-i18n="Invoice">Request Room</span></a>
                   </li>
               </ul>
-            </li>        
-            <li><a class="d-flex align-items-center" href="{{ route('conversation.index') }}"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Verify Email">Contact Us</span></a>
-            </li>
           </ul>
+
         <li class=" nav-item">
           <a class="d-flex align-items-center" href="{{ route('inventory.index') }}">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
             <span class="menu-title text-truncate" data-i18n="Raise Support">Inventory</span>
           </a>
         </li>
+
+        <li class=" nav-item"><a class="d-flex align-items-center" href="{{ route('conversation.index') }}">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <span class="menu-title text-truncate" data-i18n="File Manager">Contact Us</span>
+      </a>
+      </li>
+
       </ul>
     </div>
   </div>
