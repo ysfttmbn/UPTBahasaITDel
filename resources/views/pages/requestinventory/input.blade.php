@@ -25,15 +25,30 @@
             </div>
             <div class="mb-1">
                 <label class="d-block form-label" for="validationBioBootstrap">Date of use</label>
-                <input type="date"class="form-control" name="date_of_use" id="validationBioBootstrap" name="Tambahannoucements"required=""value="{{ $data->date_of_use }}">
+                <input type="date" class="form-control @error('date_of_use')is-invalid @enderror" name="date_of_use" id="validationBioBootstrap" name="Tambahannoucements"required=""value="{{ $data->date_of_use }}">
+                @error('date_of_use')
+                <div class="invalid-feedback">
+                {{ $message }}
+                </div>
+                @enderror
             </div>
             <div class="mb-1">
                 <label class="d-block form-label" for="validationBioBootstrap">Payback Time</label>
-                <input type="date"class="form-control" name="date_of_end"id="validationBioBootstrap" name="Tambahannoucements"  required=""value="{{ $data->payback_time}}">
+                <input type="date" class="form-control @error('date_of_end')is-invalid @enderror" name="date_of_end"id="validationBioBootstrap" name="Tambahannoucements"  required=""value="{{ $data->payback_time}}">
+                @error('date_of_end')
+                <div class="invalid-feedback">
+                {{ $message }}
+                </div>
+                @enderror
             </div>
             <div class="mb-1">
                 <label class="d-block form-label" for="validationBioBootstrap">Description</label>
-                <textarea class="form-control" name="description"id="validationBioBootstrap" name="Tambahannoucements" required value="{{ $data->description }}"></textarea>
+                <textarea class="form-control @error('description')is-invalid @enderror" name="description"id="validationBioBootstrap" name="Tambahannoucements" required value="{{ $data->description }}"></textarea>
+                @error('description')
+                <div class="invalid-feedback">
+                {{ $message }}
+                </div>
+                @enderror
             </div><br>
             <button type="submit" class="btn btn-primary waves-effect waves-float waves-light">Request</button>
             <a href="{{ route('requestinventory.index') }}" type="submit" class="btn btn-primary waves-effect waves-float waves-light">cancel</a>

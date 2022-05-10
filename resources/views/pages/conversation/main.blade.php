@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-md-6 col-12">
                     <div>
-                        <button class="btn-icon btn btn-primary btn-round btn-sm dropdown-toggle waves-effect waves-float waves-light" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button>
+                        {{-- <button class="btn-icon btn btn-primary btn-round btn-sm dropdown-toggle waves-effect waves-float waves-light" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></button> --}}
                     </div> <br>
                     <div class="card"> 
                         <div class="card-header">
@@ -23,9 +23,13 @@
                                                 <label class="col-form-label" for="fname-icon">Massage</label>
                                             </div>
                                             <div class="col-sm-9">
-                                                <div class="input-group input-group-merge">
-                                                    
-                                                    <textarea name="message" class="form-control" aria-label="With textarea"></textarea>
+                                                <div class="input-group input-group-merge">                                               
+                                                    <textarea name="message" class="form-control @error('message')is-invalid @enderror" aria-label="With textarea"></textarea>
+                                                    @error('message')
+                                                    <div class="invalid-feedback">
+                                                    {{ $message }}
+                                                    </div>
+                                                    @enderror
                                                 </div>
                                             </div>
                                         </div>
@@ -89,7 +93,12 @@
                                         @csrf
                                         <fieldset class="mb-75">
                                             <label class="form-label" for="label-textarea">add massage</label>
-                                            <textarea name="message" class="form-control" id="label-textarea" rows="3" placeholder="Add massage"></textarea>
+                                            <textarea name="message" class="form-control @error('message')is-invalid @enderror" id="label-textarea" rows="3" placeholder="Add massage"></textarea>
+                                            @error('message')
+                                            <div class="invalid-feedback">
+                                            {{ $message }}
+                                            </div>
+                                            @enderror
                                         </fieldset>
                                         <!--/ comment box -->
                                         <button type="sumbit" class="btn btn-sm btn-primary waves-effect waves-float waves-light">send</button>

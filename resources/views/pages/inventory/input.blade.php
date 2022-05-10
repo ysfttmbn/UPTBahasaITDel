@@ -15,11 +15,21 @@
             @csrf
             <div class="mb-1">
                 <label class="form-label" for="basic-addon-name">Nama Inventori</label>
-                <input type="text" name="name" id="basic-addon-name" class="form-control" placeholder="Nama Inventori" aria-label="Name" aria-describedby="basic-addon-name" required value="{{ $data->title }}">
+                <input type="text" name="name" id="basic-addon-name" class="form-control @error('name')is-invalid @enderror" placeholder="Nama Inventori" aria-label="Name" aria-describedby="basic-addon-name" required value="{{ $data->title }}">
+                @error('name')
+                <div class="invalid-feedback">
+                {{ $message }}
+                </div>
+                @enderror
             </div>
            <div class="mb-1">
-                <label for="customFile1" class="form-label">add images</label>
-                <input type="file" class="form-control" name="images" id="customFile1" required value="{{ $data->file }}">
+                <label for="customFile1" class="form-label">Add images</label>
+                <input type="file" class="form-control @error('images')is-invalid @enderror" name="images" id="customFile1" required value="{{ $data->file }}">
+                @error('images')
+                <div class="invalid-feedback">
+                {{ $message }}
+                </div>
+                @enderror
             </div>
             <br>
             <button type="submit" class="btn btn-primary waves-effect waves-float waves-light">Submit</button>
