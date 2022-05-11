@@ -39,6 +39,7 @@ Route::group(['domain' => ''], function () {
         Route::resource('conversation', ConversationController::class);
         Route::resource('gallery', GalleryController::class);
         Route::resource('inventory', InventoryController::class);
+        Route::resource('users', UsersController::class);
     });
 
     Route::group(['middleware' => ['admin']], function () {
