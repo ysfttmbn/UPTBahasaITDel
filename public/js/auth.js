@@ -43,7 +43,7 @@ function handle_post(tombol,form,url){
     $(tombol).attr("data-kt-indicator", "on");
     $.post(url, $(form).serialize(), function(result) {
         if (result.alert == "success") {
-            Swal.fire({ text: result.message, icon: "success", buttonsStyling: !1, confirmButtonText: "Ok, Mengerti!", customClass: { confirmButton: "btn btn-primary" } }).then(function() {
+            Swal.fire({ text: result.message, icon: "success", buttonsStyling: !1, confirmButtonText: "Continue!", customClass: { confirmButton: "btn btn-primary" } }).then(function() {
                 if(result.callback == "reload"){
                     location.reload();
                 }else{
@@ -51,7 +51,7 @@ function handle_post(tombol,form,url){
                 }
             });
         }else{
-            Swal.fire({ text: result.message, icon: "error", buttonsStyling: !1, confirmButtonText: "Ok, Mengerti!", customClass: { confirmButton: "btn btn-primary" } });
+            Swal.fire({ text: result.message, icon: "error", buttonsStyling: !1, confirmButtonText: "Continue!", customClass: { confirmButton: "btn btn-primary" } });
         }
         $(tombol).prop("disabled", false);
         $(tombol).removeAttr("data-kt-indicator");

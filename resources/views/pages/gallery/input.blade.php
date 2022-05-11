@@ -15,15 +15,30 @@
             @csrf
             <div class="mb-1">
                 <label class="form-label" for="basic-addon-name">Title activity</label>
-                <input type="text" name="title" id="basic-addon-name" class="form-control" placeholder="Judul" aria-label="Name" aria-describedby="basic-addon-name" required value="{{ $data->title }}">
+                <input type="text" name="title" id="basic-addon-name" class="form-control @error('title')is-invalid @enderror" placeholder="Judul" aria-label="Name" aria-describedby="basic-addon-name" required value="{{ $data->title }}">
+                @error('title')
+                <div class="invalid-feedback">
+                {{ $message }}
+                </div>
+                @enderror
             </div>
             <div class="mb-1">
                 <label for="customFile1" class="form-label">Add images</label>
-                <input type="file" class="form-control" name="images" id="customFile1" required value="{{ $data->file }}">
+                <input type="file" class="form-control @error('images')is-invalid @enderror" name="images" id="customFile1" required value="{{ $data->file }}">
+                @error('images')
+                <div class="invalid-feedback">
+                {{ $message }}
+                </div>
+                @enderror
             </div>
             <div class="mb-1">
                 <label class="d-block form-label" for="validationBioBootstrap">Description</label>
-                <textarea class="form-control" name="description"id="validationBioBootstrap" name="Description" required value="{{ $data->description }}"></textarea>
+                <textarea class="form-control @error('description')is-invalid @enderror" name="description"id="validationBioBootstrap" name="Description" required value="{{ $data->description }}"></textarea>
+                @error('description')
+                <div class="invalid-feedback">
+                {{ $message }}
+                </div>
+                @enderror
             </div>
             <br>
             <button type="submit" class="btn btn-primary waves-effect waves-float waves-light">Submit</button>
