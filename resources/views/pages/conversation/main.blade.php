@@ -11,7 +11,7 @@
                     </div> <br>
                     <div class="card"> 
                         <div class="card-header">
-                            <h4 class="card-title">conversation topic</h4>
+                            <h4 class="card-title">Conversation topic</h4>
                         </div>
                         <div class="card-body">
                             <form class="form form-horizontal" action="{{ route('conversation.store') }}" method="POST">
@@ -46,7 +46,7 @@
                 <div class="col-md-6 col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">conversation</h4>
+                            <h4 class="card-title">Conversation</h4>
                         </div>
                         <div class="card-body">
                             @foreach($conversation as $data)
@@ -92,7 +92,7 @@
                                     <form action="{{ route('conversation.reply', $data->id) }}" method="POST">
                                         @csrf
                                         <fieldset class="mb-75">
-                                            <label class="form-label" for="label-textarea">add massage</label>
+                                            <label class="form-label" for="label-textarea">Add Massage</label>
                                             <textarea name="message" class="form-control @error('message')is-invalid @enderror" id="label-textarea" rows="3" placeholder="Add massage"></textarea>
                                             @error('message')
                                             <div class="invalid-feedback">
@@ -101,7 +101,7 @@
                                             @enderror
                                         </fieldset>
                                         <!--/ comment box -->
-                                        <button type="sumbit" class="btn btn-sm btn-primary waves-effect waves-float waves-light">send</button>
+                                        <button type="sumbit" class="btn btn-sm btn-primary waves-effect waves-float waves-light">Send</button>
                                     </form>
                                 </div>
                             @endforeach

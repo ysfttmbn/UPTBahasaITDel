@@ -3,9 +3,9 @@
     <div class="content-body">
         <div class="col-12">
             <div class="card">
-                <img src="{{ asset('app-assets/images/banner/banner-12.jpg') }}" class="img-fluid card-img-top" alt="Blog Detail Pic">
+                <img src="{{ asset('app-assets/images/banner/EnglishClass.jpg') }}" class="img-fluid card-img-top" alt="Blog Detail Pic">
                 <div class="card-body">
-                    <center><h1>Kelas Bahasa Inggris</h1><br></center>
+                    <center><h1>English Class</h1><br></center>
                     <p class="card-text mb-2">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In efficitur tortor vitae aliquam facilisis. Mauris accumsan elit
                         a augue posuere, ac semper ligula faucibus. In hac habitasse platea dictumst. Nunc eget laoreet ipsum, in viverra mauris.

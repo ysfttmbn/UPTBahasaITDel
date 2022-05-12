@@ -39,6 +39,10 @@
                     <label class="form-label fw-bolder text-dark fs-6">Username</label>
                     <input class="form-control form-control-lg form-control-solid" type="text" placeholder="" name="username" autocomplete="off" />
                 </div>
+                <div class="row fv-row mb-7">
+                    <label class="form-label fw-bolder text-dark fs-6">Name</label>
+                    <input class="form-control form-control-lg form-control-solid" type="text" placeholder="" name="name" autocomplete="off" />
+                </div>
                 <div class="fv-row mb-7">
                     <label class="form-label fw-bolder text-dark fs-6">Email</label>
                     <input class="form-control form-control-lg form-control-solid" type="email" placeholder="" name="email" autocomplete="off" />
