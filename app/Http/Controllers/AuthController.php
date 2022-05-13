@@ -66,6 +66,7 @@ class AuthController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'username' => 'required|unique:users',
+            'name' => 'required|unique:users',
             'email' => 'required|email|max:255',
             'password' => 'required|min:8',
         ]);
@@ -76,6 +77,11 @@ class AuthController extends Controller
                 return response()->json([
                     'alert' => 'error',
                     'message' => $errors->first('username'),
+                ]);
+            }elseif ($errors->has('name')) {
+                return response()->json([
+                    'alert' => 'error',
+                    'message' => $errors->first('name'),
                 ]);
             }elseif ($errors->has('email')) {
                 return response()->json([
@@ -92,6 +98,7 @@ class AuthController extends Controller
 
         $user = new User;
         $user->username = $request->username;
+        $user->name = $request->name;
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
         $user->save();

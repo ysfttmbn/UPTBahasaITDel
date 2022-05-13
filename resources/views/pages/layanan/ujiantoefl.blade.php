@@ -3,9 +3,14 @@
         <div class="content-body">
             <div class="col-12">
                 <div class="card">
-                    <img src="{{ asset('app-assets/images/banner/banner-2.jpg') }}" class="img-fluid card-img-top" alt="Blog Detail Pic">
+                    <img src="{{ asset('app-assets/images/banner/TOEFL.png') }}" class="img-fluid card-img-top" alt="Blog Detail Pic">
                     <div class="card-body">
-                        <center><h1>Ujian TOEFL</h1><br></center>
+                        <center><h1>TOEFL</h1><br></center>
+                        <b><p class="card-text mb-2">
+                            UPT Bahasa IT Del is certified by Educational Testing Service as a test center to conduct 
+                            TOEFL ITP since 2013. More than xxxx test takers have taken their TOEFL ITP certification 
+                            in UPT Bahasa - IT Del
+                        </p><br></b>
                         <h4 class="mb-75">TOEFL Institutional Test (TOEFL ITP) in IT Del Campus</h4>
                         <p class="card-text mb-2">
                             IT Del has administered TOEFL ITP Test (Test of English as a Foreign Language Institutional Testing Program) since 01

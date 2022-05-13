@@ -38,7 +38,7 @@
                           @foreach($requestruangan as $item)
                             <tr class="odd">
                               <td valign="top" class="dataTables_empty">{{ $item->room }}</td>
-                              <td valign="top" class="dataTables_empty">{{ $item->user->username }}</td>
+                              <td valign="top" class="dataTables_empty">{{ $item->user->name }}</td>
                               <td valign="top" class="dataTables_empty">{{ $item->date_of_use }}</td>
                               <td valign="top" class="dataTables_empty">{{ $item->time_end }}</td>
                               <td valign="top" class="dataTables_empty">{{ $item->description }}</td>

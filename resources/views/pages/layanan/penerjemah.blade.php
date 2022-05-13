@@ -3,9 +3,14 @@
     <div class="content-body">
         <div class="col-12">
             <div class="card">
-                <img src="{{ asset('app-assets/images/banner/banner-4.jpg') }}" class="img-fluid card-img-top" alt="Blog Detail Pic">
+                <img src="{{ asset('app-assets/images/banner/Translation.jpg') }}" class="img-fluid card-img-top" alt="Blog Detail Pic">
                 <div class="card-body">
-                    <center><h1>Penerjemah</h1><br></center>
+                    <center><h1>Translation</h1><br></center>
+                    <b><p class="card-text mb-2">
+                        UPT Bahasa IT Del provides translation services from Bahasa Indonesia to English and English to 
+                        Bahasa Indonesia. This service can be used by both internal and external of IT Del. Contact us 
+                        for further info on this service
+                    </p><br></b>
                     <p class="card-text mb-2">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In efficitur tortor vitae aliquam facilisis. Mauris accumsan elit
                         a augue posuere, ac semper ligula faucibus. In hac habitasse platea dictumst. Nunc eget laoreet ipsum, in viverra mauris.
