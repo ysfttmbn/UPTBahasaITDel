@@ -136,6 +136,7 @@
                     </tbody>
                   </table>
                   @endif
+                  {{ $requestinventory->links() }}
                       <div class="d-flex justify-content-between mx-2 row mb-1"></div>
                     </div>
                   </div>

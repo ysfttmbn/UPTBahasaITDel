@@ -14,7 +14,7 @@ class InventoryController extends Controller
      */
     public function index()
     {
-        $inventory = Inventory::all();
+        $inventory = Inventory::orderBy('id','DESC')->paginate(10);
         return view('pages.inventory.main', ['inventories' => $inventory]);
     }
 
@@ -88,9 +88,10 @@ class InventoryController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'images' => 'required',
+            // 'images' => 'required',
         ]);
 
+        if($request->hasfile('images')){
         $file = $request->file('images');
         $namaFile =$file->getClientOriginalName();
         $tujuanFile = 'file';
@@ -102,6 +103,12 @@ class InventoryController extends Controller
         
         $inventory->update();
         return redirect('inventory');
+        }else{
+        $inventory->name = $request->name;
+        
+        $inventory->update();
+        return redirect('inventory');   
+        }
     }
 
     /**

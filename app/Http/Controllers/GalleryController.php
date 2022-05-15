@@ -87,10 +87,11 @@ class GalleryController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            'images' => 'required',
+            // 'images' => 'required',
             'description' => 'required',
         ]);
-
+        
+        if($request->hasfile('images')){
         $file = $request->file('images');
         $namaFile =$file->getClientOriginalName();
         $tujuanFile = 'file';
@@ -101,6 +102,12 @@ class GalleryController extends Controller
         $gallery->description = $request->description;
         
         $gallery->save();
+        }else{
+            $gallery->title = $request->title;
+            $gallery->description = $request->description;
+            
+            $gallery->save();    
+        }
         return redirect('gallery');
     }
 

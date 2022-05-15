@@ -13,7 +13,7 @@ class RequestInventoryController extends Controller
 {
     public function index()
     {
-        $requestinventory = RequestInventory::all();
+        $requestinventory = RequestInventory::orderBy('id','DESC')->paginate(10);
         return view('pages.requestinventory.main', compact('requestinventory'));
     }
 

@@ -24,7 +24,7 @@
             </div>
             <div class="mb-1">
                 <label for="customFile1" class="form-label">Add images</label>
-                <input type="file" class="form-control @error('images')is-invalid @enderror" name="images" id="customFile1" required value="{{ $data->file }}">
+                <input type="file" class="form-control @error('images')is-invalid @enderror" name="images" id="customFile1" required>{{ $data->images }}</input>
                 @error('images')
                 <div class="invalid-feedback">
                 {{ $message }}

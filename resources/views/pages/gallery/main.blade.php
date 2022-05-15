@@ -19,7 +19,7 @@
                    @foreach ($galleries as $item)
                     <div class="col-xl-4 col-lg-5 col-md-5 order-1 order-md-0">
                         <div class="card">
-                            <img class="card-img-top" src="{{ asset('file/'.$item->images) }}" alt="Card image cap">
+                            <img class="card-img-top" src="{{ asset('file/'.$item->images) }}" alt="Card image cap" style="height:170px">
                             <div class="card-body">
                                 <h4 class="card-title text-center">{{ $item->title }}</h4>
                                 <p class="card-text">

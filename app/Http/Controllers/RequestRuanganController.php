@@ -16,7 +16,7 @@ class RequestRuanganController extends Controller
      */
     public function index()
     {
-        $requestruangan = RequestRuangan::all();
+        $requestruangan = RequestRuangan::orderBy('id','DESC')->paginate(10);
         return view('pages.requestruangan.main', compact('requestruangan'));
     }
 
