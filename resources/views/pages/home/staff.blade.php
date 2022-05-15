@@ -10,10 +10,9 @@
                             <div class="card-body">
                                 <div class="user-avatar-section">
                                     <div class="d-flex align-items-center flex-column">
-                                        <img class="img-fluid rounded mt-3 mb-2" src="{{ asset('app-assets/images/portrait/small/avatar-s-2.jpg') }}" height="110" width="110" alt="User avatar" />
+                                        <img class="img-fluid rounded mt-3 mb-2" src="{{ asset('img/staff/Rentauli.jpg') }}" height="110" width="110" alt="User avatar" />
                                         <div class="user-info text-center">
-                                            <h4>Gertrude Barton</h4>
-                                            <span class="badge bg-light-secondary">Author</span>
+                                            <h4>Rentauli Mariah Silalahi, S.Pd, M. Ed</h4>
                                         </div>
                                     </div>
                                 </div><br>
@@ -21,32 +20,7 @@
                                 <div class="info-container">
                                     <ul class="list-unstyled">
                                         <li class="mb-75">
-                                            <span class="fw-bolder me-25">Username:</span>
-                                            <span>violet.dev</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Billing Email:</span>
-                                            <span>vafgot@vultukir.org</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Role:</span>
-                                            <span>Author</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Tax ID:</span>
-                                            <span>Tax-8965</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Contact:</span>
-                                            <span>+1 (609) 933-44-22</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Language:</span>
-                                            <span>English</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Country:</span>
-                                            <span>Wake Island</span>
+                                            <span>Rentauli Mariah Silalahi, S.Pd, M. Ed obtained her Master’s Degree from Monash University. She is currently doing her PhD at University of Bristol</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -58,10 +32,9 @@
                             <div class="card-body">
                                 <div class="user-avatar-section">
                                     <div class="d-flex align-items-center flex-column">
-                                        <img class="img-fluid rounded mt-3 mb-2" src="{{ asset('app-assets/images/portrait/small/avatar-s-2.jpg') }}" height="110" width="110" alt="User avatar" />
+                                        <img class="img-fluid rounded mt-3 mb-2" src="{{ asset('img/staff/Rumondang.jpg') }}" height="110" width="110" alt="User avatar" />
                                         <div class="user-info text-center">
-                                            <h4>Gertrude Barton</h4>
-                                            <span class="badge bg-light-secondary">Author</span>
+                                            <h4>Rumondang Miranda Marsaulina, S.P, M.Si</h4>
                                         </div>
                                     </div>
                                 </div><br>
@@ -69,32 +42,7 @@
                                 <div class="info-container">
                                     <ul class="list-unstyled">
                                         <li class="mb-75">
-                                            <span class="fw-bolder me-25">Username:</span>
-                                            <span>violet.dev</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Billing Email:</span>
-                                            <span>vafgot@vultukir.org</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Role:</span>
-                                            <span>Author</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Tax ID:</span>
-                                            <span>Tax-8965</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Contact:</span>
-                                            <span>+1 (609) 933-44-22</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Language:</span>
-                                            <span>English</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Country:</span>
-                                            <span>Wake Island</span>
+                                            <span>Rumondang Miranda Marsaulina, S.P, M.Si obtained her Master’s Degree from Universitas Indonesia</span><br><br>
                                         </li>
                                     </ul>
                                 </div>
@@ -106,43 +54,17 @@
                             <div class="card-body">
                                 <div class="user-avatar-section">
                                     <div class="d-flex align-items-center flex-column">
-                                        <img class="img-fluid rounded mt-3 mb-2" src="{{ asset('app-assets/images/portrait/small/avatar-s-2.jpg') }}" height="110" width="110" alt="User avatar" />
+                                        <img class="img-fluid rounded mt-3 mb-2" src="{{ asset('img/staff/Tiurma.jpg') }}" height="110" width="110" alt="User avatar" />
                                         <div class="user-info text-center">
-                                            <h4>Gertrude Barton</h4>
-                                            <span class="badge bg-light-secondary">Author</span>
-                                        </div>
+                                            <h4>Tiurma Lumban Gaol, SP, M.P</h4>
+                                        </div><br>
                                     </div>
                                 </div><br>
                                 <h4 class="fw-bolder border-bottom pb-50 mb-1">Details</h4>
                                 <div class="info-container">
                                     <ul class="list-unstyled">
                                         <li class="mb-75">
-                                            <span class="fw-bolder me-25">Username:</span>
-                                            <span>violet.dev</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Billing Email:</span>
-                                            <span>vafgot@vultukir.org</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Role:</span>
-                                            <span>Author</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Tax ID:</span>
-                                            <span>Tax-8965</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Contact:</span>
-                                            <span>+1 (609) 933-44-22</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Language:</span>
-                                            <span>English</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Country:</span>
-                                            <span>Wake Island</span>
+                                            <span>Tiurma Lumban Gaol, SP, M.P obtained her Master’s Degree from Institut Pertanian Bogor</span><br><br>
                                         </li>
                                     </ul>
                                 </div>
@@ -154,10 +76,9 @@
                             <div class="card-body">
                                 <div class="user-avatar-section">
                                     <div class="d-flex align-items-center flex-column">
-                                        <img class="img-fluid rounded mt-3 mb-2" src="{{ asset('app-assets/images/portrait/small/avatar-s-2.jpg') }}" height="110" width="110" alt="User avatar" />
+                                        <img class="img-fluid rounded mt-3 mb-2" src="{{ asset('img/staff/Santi.png') }}" height="110" width="110" alt="User avatar" />
                                         <div class="user-info text-center">
-                                            <h4>Gertrude Barton</h4>
-                                            <span class="badge bg-light-secondary">Author</span>
+                                            <h4>Santi Agustina Manalu, S.S., M.Pd</h4>
                                         </div>
                                     </div>
                                 </div><br>
@@ -165,32 +86,7 @@
                                 <div class="info-container">
                                     <ul class="list-unstyled">
                                         <li class="mb-75">
-                                            <span class="fw-bolder me-25">Username:</span>
-                                            <span>violet.dev</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Billing Email:</span>
-                                            <span>vafgot@vultukir.org</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Role:</span>
-                                            <span>Author</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Tax ID:</span>
-                                            <span>Tax-8965</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Contact:</span>
-                                            <span>+1 (609) 933-44-22</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Language:</span>
-                                            <span>English</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Country:</span>
-                                            <span>Wake Island</span>
+                                            <span>Santi Agustina Manalu, S.S., M.Pd obtained her Master’s Degree from Universitas Pelita Harapan </span>
                                         </li>
                                     </ul>
                                 </div>
@@ -202,43 +98,17 @@
                             <div class="card-body">
                                 <div class="user-avatar-section">
                                     <div class="d-flex align-items-center flex-column">
-                                        <img class="img-fluid rounded mt-3 mb-2" src="{{ asset('app-assets/images/portrait/small/avatar-s-2.jpg') }}" height="110" width="110" alt="User avatar" />
+                                        <img class="img-fluid rounded mt-3 mb-2" src="{{ asset('img/staff/Monalisa.jpg') }}" height="110" width="110" alt="User avatar" />
                                         <div class="user-info text-center">
-                                            <h4>Gertrude Barton</h4>
-                                            <span class="badge bg-light-secondary">Author</span>
-                                        </div>
+                                            <h4>Monalisa Pasaribu, S.S.,M.Ed</h4>
+                                        </div><br>
                                     </div>
                                 </div><br>
                                 <h4 class="fw-bolder border-bottom pb-50 mb-1">Details</h4>
                                 <div class="info-container">
                                     <ul class="list-unstyled">
                                         <li class="mb-75">
-                                            <span class="fw-bolder me-25">Username:</span>
-                                            <span>violet.dev</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Billing Email:</span>
-                                            <span>vafgot@vultukir.org</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Role:</span>
-                                            <span>Author</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Tax ID:</span>
-                                            <span>Tax-8965</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Contact:</span>
-                                            <span>+1 (609) 933-44-22</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Language:</span>
-                                            <span>English</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Country:</span>
-                                            <span>Wake Island</span>
+                                            <span>Monalisa Pasaribu obtained her Master’s Degree from University of Wollongong, Australia</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -250,10 +120,9 @@
                             <div class="card-body">
                                 <div class="user-avatar-section">
                                     <div class="d-flex align-items-center flex-column">
-                                        <img class="img-fluid rounded mt-3 mb-2" src="{{ asset('app-assets/images/portrait/small/avatar-s-2.jpg') }}" height="110" width="110" alt="User avatar" />
+                                        <img class="img-fluid rounded mt-3 mb-2" src="{{ asset('img/staff/Tahan.png') }}" height="110" width="110" alt="User avatar" />
                                         <div class="user-info text-center">
-                                            <h4>Gertrude Barton</h4>
-                                            <span class="badge bg-light-secondary">Author</span>
+                                            <h4>Tahan Sihombing, S.Pd.,M.AppLing (TESOL)</h4>
                                         </div>
                                     </div>
                                 </div><br>
@@ -261,32 +130,29 @@
                                 <div class="info-container">
                                     <ul class="list-unstyled">
                                         <li class="mb-75">
-                                            <span class="fw-bolder me-25">Username:</span>
-                                            <span>violet.dev</span>
+                                            <span>Tahan Sihombing obtained his Master’s Degree  from the University of Queensland, Australia</span>
                                         </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 col-md-5 order-1 order-md-0">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="user-avatar-section">
+                                    <div class="d-flex align-items-center flex-column">
+                                        <img class="img-fluid rounded mt-3 mb-2" src="{{ asset('img/staff/Juli.jpg') }}" height="110" width="110" alt="User avatar" />
+                                        <div class="user-info text-center">
+                                            <h4>Juli Yanti Damanik, S.S.,M.Tesol </h4>
+                                        </div>
+                                    </div>
+                                </div><br>
+                                <h4 class="fw-bolder border-bottom pb-50 mb-1">Details</h4>
+                                <div class="info-container">
+                                    <ul class="list-unstyled">
                                         <li class="mb-75">
-                                            <span class="fw-bolder me-25">Billing Email:</span>
-                                            <span>vafgot@vultukir.org</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Role:</span>
-                                            <span>Author</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Tax ID:</span>
-                                            <span>Tax-8965</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Contact:</span>
-                                            <span>+1 (609) 933-44-22</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Language:</span>
-                                            <span>English</span>
-                                        </li>
-                                        <li class="mb-75">
-                                            <span class="fw-bolder me-25">Country:</span>
-                                            <span>Wake Island</span>
+                                            <span>Juli Yanti Damanik obtained her Master's Degree from Monash University, Australia</span>
                                         </li>
                                     </ul>
                                 </div>

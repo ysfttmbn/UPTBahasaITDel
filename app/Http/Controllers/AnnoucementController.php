@@ -16,7 +16,7 @@ class AnnoucementController extends Controller
      */
     public function index()
     {
-        $annoucements = Annoucement::orderBy('id')->paginate(10);
+        $annoucements = Annoucement::orderBy('id')->paginate(20);
         return view('pages.dashboard.main')->with('annoucements', $annoucements);
     }
 

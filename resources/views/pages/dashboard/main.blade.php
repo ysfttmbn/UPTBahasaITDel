@@ -59,16 +59,6 @@
                     <div class="card-datatable table-responsive pt-0">
                         <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
                           <div class="d-flex justify-content-between align-items-center header-actions mx-2 row mt-75"><div class="col-sm-12 col-lg-4 d-flex justify-content-center justify-content-lg-start">
-                            <div class="dataTables_length" id="DataTables_Table_0_length">
-                              <label>Show 
-                                <select name="DataTables_Table_0_length" aria-controls="DataTables_Table_0" class="form-select">
-                                  <option value="10">10</option>
-                                  <option value="25">25</option>
-                                  <option value="50">50</option>
-                                  <option value="100">100</option>
-                                </select> entries
-                              </label>
-                            </div>
                           </div>
                           <div class="col-sm-12 col-lg-8 ps-xl-75 ps-0">
                             <div class="dt-action-buttons d-flex align-items-center justify-content-center justify-content-lg-end flex-lg-nowrap flex-wrap">
@@ -105,10 +95,10 @@
                             </thead>
                         <tbody>
 
-                            @foreach($annoucements as $annocement)
+                            @foreach($annoucements as $index => $annocement)
                             <tr class="odd">
                               {{-- <td valign="top" class="dataTables_empty">{{ $annocement->id }}</td> --}}
-                              <td valign="top" class="dataTables_empty">{{ $loop->iteration }}</td>
+                              <td valign="top" class="dataTables_empty">{{ $index + $annoucements->firstItem() }}</td>
                               <td valign="top" class="dataTables_empty">{{ $annocement->title }}</td>
                               <td valign="top" class="dataTables_empty">{{ $annocement->description }}</td>
                               <td valign="top" class="dataTables_empty"><a href="{{ asset('file/'. $annocement->file) }}" target="_blank">{{ $annocement->file }}</td>
@@ -152,6 +142,7 @@
                           
                         </tbody>
                       </table>
+                      {{ $annoucements->links() }}
                       <div class="d-flex justify-content-between mx-2 row mb-1"></div>
                     </div>
                   </div>

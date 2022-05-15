@@ -9,7 +9,7 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $annoucements = Annoucement::orderBy('id')->paginate(10);
+        $annoucements = Annoucement::orderBy('id','DESC')->paginate(10);
         return view('pages.dashboard.main')->with('annoucements', $annoucements);
     }
 }
