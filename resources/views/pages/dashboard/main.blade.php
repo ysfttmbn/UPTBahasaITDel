@@ -60,14 +60,16 @@
                         <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
                           <div class="d-flex justify-content-between align-items-center header-actions mx-2 row mt-75"><div class="col-sm-12 col-lg-4 d-flex justify-content-center justify-content-lg-start">
                           </div>
-                          <div class="col-sm-12 col-lg-8 ps-xl-75 ps-0">
+                            <div class="col-sm-12 col-lg-8 ps-xl-75 ps-0">
                             <div class="dt-action-buttons d-flex align-items-center justify-content-center justify-content-lg-end flex-lg-nowrap flex-wrap">
-                              <div class="me-1"><div id="DataTables_Table_0_filter" class="dataTables_filter">
+                        <form>
+                                <div class="me-1"><div id="DataTables_Table_0_filter" class="dataTables_filter">
                                 <label>Search:
-                                  <input type="search" class="form-control" placeholder="" aria-controls="DataTables_Table_0">
+                                  <input type="search" class="form-control" placeholder="" aria-controls="DataTables_Table_0" name="search" value="{{ request()->search }}">
                                 </label>
                               </div>
                             </div>
+                        </form>
                             @if(!Auth::guest() && Auth::user()->isAdmin)
                             <div class="dt-buttons d-inline-flex mt-50">
                               <a class="dt-button add-new btn btn-primary" href="{{ route('annoucements.create') }}">
