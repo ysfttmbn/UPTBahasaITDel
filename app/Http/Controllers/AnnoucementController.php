@@ -96,12 +96,13 @@ class AnnoucementController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            'file' => 'required',
+            // 'file' => 'required',
             'description' => 'required',
             'date_of_use' => 'required',
             'date_of_end' => 'required',
         ]);
 
+        if($request->hasfile('file')){
         $file = $request->file('file');
         $namaFile =$file->getClientOriginalName();
         $tujuanFile = 'file';
@@ -115,6 +116,17 @@ class AnnoucementController extends Controller
         $annoucement->date_of_end = $request->date_of_end;
 
         $annoucement->update();
+        }else{
+        $annoucement->id_user = Auth::User()->id;
+        $annoucement->title = $request->title;
+        $annoucement->description = $request->description;
+        $annoucement->date_of_use = $request->date_of_use;
+        $annoucement->date_of_end = $request->date_of_end;   
+
+        $annoucement->update();
+        }
+        
+        
         return redirect('dashboard');
     }
 
