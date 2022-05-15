@@ -65,7 +65,7 @@
                         <form>
                                 <div class="me-1"><div id="DataTables_Table_0_filter" class="dataTables_filter">
                                 <label>Search:
-                                  <input type="search" class="form-control" placeholder="" aria-controls="DataTables_Table_0" name="search" value="{{ request()->search }}">
+                                  <input type="search" class="form-control" placeholder="" aria-controls="DataTables_Table_0" name="search" autocomplete="off" value="{{ request()->search }}">
                                 </label>
                               </div>
                             </div>
