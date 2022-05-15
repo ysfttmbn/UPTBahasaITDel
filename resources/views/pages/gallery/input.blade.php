@@ -33,7 +33,7 @@
             </div>
             <div class="mb-1">
                 <label class="d-block form-label" for="validationBioBootstrap">Description</label>
-                <textarea class="form-control @error('description')is-invalid @enderror" name="description"id="validationBioBootstrap" name="Description" required value="{{ $data->description }}"></textarea>
+                <textarea class="form-control @error('description')is-invalid @enderror" name="description"id="validationBioBootstrap" name="Description" required>{{ $data->description }}</textarea>
                 @error('description')
                 <div class="invalid-feedback">
                 {{ $message }}

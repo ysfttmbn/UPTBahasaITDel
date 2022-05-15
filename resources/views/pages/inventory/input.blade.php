@@ -15,7 +15,7 @@
             @csrf
             <div class="mb-1">
                 <label class="form-label" for="basic-addon-name">Nama Inventori</label>
-                <input type="text" name="name" id="basic-addon-name" class="form-control @error('name')is-invalid @enderror" placeholder="Nama Inventori" aria-label="Name" aria-describedby="basic-addon-name" required value="{{ $data->title }}">
+                <input type="text" name="name" id="basic-addon-name" class="form-control @error('name')is-invalid @enderror" placeholder="Nama Inventori" aria-label="Name" aria-describedby="basic-addon-name" required value="{{ $data->name }}">
                 @error('name')
                 <div class="invalid-feedback">
                 {{ $message }}

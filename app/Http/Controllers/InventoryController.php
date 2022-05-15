@@ -74,7 +74,7 @@ class InventoryController extends Controller
      */
     public function edit(Inventory $inventory)
     {
-        // return view('pages.inventory.input', ['data' => $inventory]);
+         return view('pages.inventory.input', ['data' => $inventory]);
     }
 
     /**
@@ -98,7 +98,7 @@ class InventoryController extends Controller
 
         $inventory->name = $request->name;
         $inventory->images = $namaFile;
-        $inventory->description = $request->description;
+        // $inventory->description = $request->description;
         
         $inventory->update();
         return redirect('inventory');

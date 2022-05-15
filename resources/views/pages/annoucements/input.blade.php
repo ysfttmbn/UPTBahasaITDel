@@ -24,7 +24,7 @@
             </div>
             <div class="mb-1">
                 <label for="customFile1" class="form-label">Add Files</label>
-                <input type="file"class="form-control @error('file')is-invalid @enderror" name="file" type="file" id="customFile1" required value="{{ $data->file }}">
+                <input type="file"class="form-control @error('file')is-invalid @enderror" name="file" type="file" id="customFile1" required>{{ $data->file }}</input>
                 @error('file')
                 <div class="invalid-feedback">
                 {{ $message }}
@@ -33,7 +33,7 @@
             </div>
             <div class="mb-1">
                 <label class="d-block form-label" for="validationBioBootstrap">Description</label>
-                <textarea class="form-control @error('description')is-invalid @enderror" name="description" id="validationBioBootstrap" required value="{{ $data->description }}"></textarea>
+                <textarea class="form-control @error('description')is-invalid @enderror" name="description" id="validationBioBootstrap" required>{{ $data->description }}</textarea>
                 @error('description')
                 <div class="invalid-feedback">
                 {{ $message }}
