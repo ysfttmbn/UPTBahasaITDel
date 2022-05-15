@@ -63,7 +63,7 @@ class InventoryController extends Controller
      */
     public function show(Inventory $inventory)
     {
-        return view('pages.inventory.input', ['data' => $inventory]);
+        // return view('pages.inventory.input', ['data' => $inventory]);
     }
 
     /**
@@ -74,7 +74,7 @@ class InventoryController extends Controller
      */
     public function edit(Inventory $inventory)
     {
-        //
+        // return view('pages.inventory.input', ['data' => $inventory]);
     }
 
     /**
