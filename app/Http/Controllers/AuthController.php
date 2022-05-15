@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Role;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -17,7 +18,8 @@ class AuthController extends Controller
     }
     public function index()
     {
-        return view('pages.auth.main');
+        $roles = Role::all();
+        return view('pages.auth.main', ['roles' => $roles]);
     }
     public function do_login(Request $request)
     {
@@ -69,6 +71,7 @@ class AuthController extends Controller
             'name' => 'required|unique:users',
             'email' => 'required|email|max:255',
             'password' => 'required|min:8',
+            'role_id' => 'required'
         ]);
         
         if ($validator->fails()) {
@@ -101,6 +104,8 @@ class AuthController extends Controller
         $user->name = $request->name;
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
+        $user->role_id = $request->role_id;
+        $user->status = 'PENDING';
         $user->save();
         return response()->json([
             'alert' => 'success',

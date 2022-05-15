@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
@@ -10,13 +11,17 @@ class UserSeeder extends Seeder
 {
     public function run()
     {
+        $adminRoleId = Role::where('role', 'Administrator')->first()->id;
+        $studentRoleId = Role::where('role', 'Mahasiswa')->first()->id;
+
         $data = array(
             [
                 'username' => 'admin',
                 'name' => 'Administrator',
                 'email' => 'admin@mail.com',
                 'password' => Hash::make('password'),
-                'isAdmin' => true
+                'role_id' => $adminRoleId,
+                'approval_status' => 'APPROVED'
 
             ],
             [
@@ -24,7 +29,8 @@ class UserSeeder extends Seeder
                 'name' => 'Yosafat Tambun',
                 'email' => 'yosafathtambun@gmail.com',
                 'password' => Hash::make('yosafattambun'),
-                'isAdmin' => false
+                'role_id' => $studentRoleId,
+                'approval_status' => 'APPROVED'
 
             ],
             [
@@ -32,15 +38,16 @@ class UserSeeder extends Seeder
                 'name' => 'Julianti Sitorus',
                 'email' => 'juliantisitorus071@gmail.com',
                 'password' => Hash::make('julianti117'),
-                'isAdmin' => false
-
+                'role_id' => $studentRoleId,
+                'approval_status' => 'APPROVED'
             ],
             [
                 'username' => 'pandiganteng',
                 'name' => 'Krisna Saragih',
                 'email' => 'gantengbanget123@gmail.com',
                 'password' => Hash::make('pandiganteng'),
-                'isAdmin' => false
+                'role_id' => $studentRoleId,
+                'approval_status' => 'APPROVED'
 
             ],
             [
@@ -48,7 +55,8 @@ class UserSeeder extends Seeder
                 'name' => 'Sandro Panjaitan',
                 'email' => 'sandro123@gmail.com',
                 'password' => Hash::make('sandropangihutan'),
-                'isAdmin' => false
+                'role_id' => $studentRoleId,
+                'approval_status' => 'APPROVED'
 
             ],
         );
@@ -58,7 +66,8 @@ class UserSeeder extends Seeder
                 'name' => $d['name'],
                 'email' => $d['email'],
                 'password' => $d['password'],
-                'isAdmin' => $d['isAdmin']
+                'role_id' => $d['role_id'],
+                'approval_status' => $d['approval_status']
             ]);
         }
     }

@@ -36,6 +36,15 @@
                     <a href="javascript:;" onclick="auth_content('page_login');" class="link-primary fw-bolder">Log in here</a></div>
                 </div>
                 <div class="row fv-row mb-7">
+                    <label class="form-label fw-bolder text-dark fs-6">Daftar Sebagai</label>
+                    <select class="form-select" data-control="select2" data-placeholder="Daftar Sebagai" name="role_id">
+                        <option></option>
+                        @foreach($roles as $role)
+                            <option value={{ $role->id }}>{{ $role->role }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="row fv-row mb-7">
                     <label class="form-label fw-bolder text-dark fs-6">Username</label>
                     <input class="form-control form-control-lg form-control-solid" type="text" placeholder="" name="username" autocomplete="off" />
                 </div>
