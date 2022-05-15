@@ -12,10 +12,10 @@
                                     <div class="d-flex align-items-center flex-column">
                                         <img class="img-fluid rounded mt-3 mb-2" src="{{ asset('img/staff/Rentauli.jpg') }}" height="110" width="110" alt="User avatar" />
                                         <div class="user-info text-center">
-                                            <h4>Rentauli Mariah Silalahi, S.Pd, M. Ed</h4>
+                                            <h4>Rentauli Mariah Silalahi, S.Pd, M. Ed</h4><br><br>
                                         </div>
                                     </div>
-                                </div><br>
+                                </div>
                                 <h4 class="fw-bolder border-bottom pb-50 mb-1">Details</h4>
                                 <div class="info-container">
                                     <ul class="list-unstyled">
@@ -64,7 +64,7 @@
                                 <div class="info-container">
                                     <ul class="list-unstyled">
                                         <li class="mb-75">
-                                            <span>Tiurma Lumban Gaol, SP, M.P obtained her Master’s Degree from Institut Pertanian Bogor</span><br><br>
+                                            <span>Tiurma Lumban Gaol, SP, M.P obtained her Master’s Degree from Institut Pertanian Bogor</span><br><br><br>
                                         </li>
                                     </ul>
                                 </div>
@@ -103,7 +103,7 @@
                                             <h4>Monalisa Pasaribu, S.S.,M.Ed</h4>
                                         </div><br>
                                     </div>
-                                </div><br>
+                                </div>
                                 <h4 class="fw-bolder border-bottom pb-50 mb-1">Details</h4>
                                 <div class="info-container">
                                     <ul class="list-unstyled">
@@ -125,7 +125,7 @@
                                             <h4>Tahan Sihombing, S.Pd.,M.AppLing (TESOL)</h4>
                                         </div>
                                     </div>
-                                </div><br>
+                                </div>
                                 <h4 class="fw-bolder border-bottom pb-50 mb-1">Details</h4>
                                 <div class="info-container">
                                     <ul class="list-unstyled">
